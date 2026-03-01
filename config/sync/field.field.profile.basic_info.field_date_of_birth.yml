@@ -1,0 +1,21 @@
+uuid: 165ab6f8-476d-44f9-9421-6f0822f97c1b
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_date_of_birth
+    - profile.type.basic_info
+  module:
+    - datetime
+id: profile.basic_info.field_date_of_birth
+field_name: field_date_of_birth
+entity_type: profile
+bundle: basic_info
+label: 'Ngày sinh'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

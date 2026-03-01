@@ -1,0 +1,16 @@
+uuid: 38c58eae-0c30-4b7b-9900-4a43aa5a2282
+langcode: vi
+status: true
+dependencies:
+  module:
+    - user
+id: user
+label: User
+type: 'canonical_entities:user'
+pattern: 'user/[user:account-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships:
+  'user:langcode:language':
+    label: Language

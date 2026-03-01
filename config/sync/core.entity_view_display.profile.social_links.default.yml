@@ -1,0 +1,66 @@
+uuid: 6e97fe8e-ab25-4bf4-b9d2-91da5745c6e7
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.profile.social_links.field_facebook_profile
+    - field.field.profile.social_links.field_github_profile
+    - field.field.profile.social_links.field_linkedin_profile
+    - field.field.profile.social_links.field_personal_website
+    - profile.type.social_links
+  module:
+    - link
+id: profile.social_links.default
+targetEntityType: profile
+bundle: social_links
+mode: default
+content:
+  field_facebook_profile:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_github_profile:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_linkedin_profile:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_personal_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

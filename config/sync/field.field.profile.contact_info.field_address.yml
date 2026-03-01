@@ -1,0 +1,19 @@
+uuid: 1d73ef23-c40d-438f-91d2-0c5bf3412d0c
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_address
+    - profile.type.contact_info
+id: profile.contact_info.field_address
+field_name: field_address
+entity_type: profile
+bundle: contact_info
+label: 'Địa chỉ'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

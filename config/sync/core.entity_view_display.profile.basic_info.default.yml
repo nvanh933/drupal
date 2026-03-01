@@ -1,0 +1,91 @@
+uuid: 713a5f63-3bc1-4c19-b8ef-35bd3870ca7b
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.profile.basic_info.field_avatar
+    - field.field.profile.basic_info.field_date_of_birth
+    - field.field.profile.basic_info.field_first_name
+    - field.field.profile.basic_info.field_gender
+    - field.field.profile.basic_info.field_id_number
+    - field.field.profile.basic_info.field_last_name
+    - field.field.profile.basic_info.field_marital_status
+    - field.field.profile.basic_info.field_middle_name
+    - profile.type.basic_info
+  module:
+    - datetime
+    - image
+id: profile.basic_info.default
+targetEntityType: profile
+bundle: basic_info
+mode: default
+content:
+  field_avatar:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_date_of_birth:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_gender:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_id_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_marital_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_middle_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

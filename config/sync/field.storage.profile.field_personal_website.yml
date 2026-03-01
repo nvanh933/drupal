@@ -1,0 +1,19 @@
+uuid: 823651a7-36a1-4e13-8130-42dc46d60e72
+langcode: vi
+status: true
+dependencies:
+  module:
+    - link
+    - profile
+id: profile.field_personal_website
+field_name: field_personal_website
+entity_type: profile
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

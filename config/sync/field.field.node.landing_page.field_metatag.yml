@@ -1,0 +1,21 @@
+uuid: de9077e5-a450-4f53-8e08-0a0e27607849
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.landing_page
+  module:
+    - metatag
+id: node.landing_page.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: landing_page
+label: Metatag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

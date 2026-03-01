@@ -1,0 +1,19 @@
+uuid: 6d634a1a-9099-4d49-904e-c8b71c4ddead
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_middle_name
+    - profile.type.basic_info
+id: profile.basic_info.field_middle_name
+field_name: field_middle_name
+entity_type: profile
+bundle: basic_info
+label: 'Tên đệm'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

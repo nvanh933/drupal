@@ -1,0 +1,19 @@
+uuid: 4ea8aca1-2134-47c4-96e2-7552829ddd33
+langcode: vi
+status: true
+dependencies:
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  basic_info_profiles: true
+  langcode: true

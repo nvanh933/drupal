@@ -1,0 +1,48 @@
+uuid: 0f75de88-e473-4f3d-b87f-0091b0b886db
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.profile.contact_info.field_address
+    - field.field.profile.contact_info.field_phone_number
+    - field.field.profile.contact_info.field_province
+    - field.field.profile.contact_info.field_ward
+    - profile.type.contact_info
+id: profile.contact_info.default
+targetEntityType: profile
+bundle: contact_info
+mode: default
+content:
+  field_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_province:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ward:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

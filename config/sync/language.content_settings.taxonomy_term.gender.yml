@@ -1,0 +1,11 @@
+uuid: 72086ddd-d78c-484f-a947-9585176a0f8f
+langcode: vi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.gender
+id: taxonomy_term.gender
+target_entity_type_id: taxonomy_term
+target_bundle: gender
+default_langcode: site_default
+language_alterable: false

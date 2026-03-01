@@ -1,0 +1,21 @@
+uuid: 48c0e44f-386a-4579-aefc-cd0663264ad5
+langcode: vi
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_middle_name
+field_name: field_middle_name
+entity_type: profile
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

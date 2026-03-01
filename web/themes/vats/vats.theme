@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function vats_preprocess_html(&$vars) {
+
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function vats_preprocess_page(&$vars) {
+  $vars['site_name'] = \Drupal::config('system.site')->get('name');
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function vats_preprocess_node(&$vars) {
+
+}

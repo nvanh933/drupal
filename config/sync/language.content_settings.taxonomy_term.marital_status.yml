@@ -1,0 +1,11 @@
+uuid: c669ae97-551a-4664-833e-aca1e065a1c8
+langcode: vi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.marital_status
+id: taxonomy_term.marital_status
+target_entity_type_id: taxonomy_term
+target_bundle: marital_status
+default_langcode: site_default
+language_alterable: false

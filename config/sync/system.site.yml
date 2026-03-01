@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
+langcode: en
+uuid: 5c31b3b0-75f1-4ff7-bd6c-5ebcd0e5928a
+name: 'Drupal CMS'
+mail: noreply.vats@gmail.com
+slogan: 'Think outside the box'
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: vi
+mail_notification: ''

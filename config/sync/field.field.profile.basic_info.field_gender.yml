@@ -1,0 +1,29 @@
+uuid: d11c66b2-fd40-4071-97ff-8b1b7a6b83dd
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_gender
+    - profile.type.basic_info
+    - taxonomy.vocabulary.gender
+id: profile.basic_info.field_gender
+field_name: field_gender
+entity_type: profile
+bundle: basic_info
+label: 'Giới tính'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      gender: gender
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

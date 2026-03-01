@@ -1,0 +1,29 @@
+uuid: eab42675-f659-41fe-b9be-fc032f672164
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_province
+    - profile.type.contact_info
+    - taxonomy.vocabulary.list_of_provinces
+id: profile.contact_info.field_province
+field_name: field_province
+entity_type: profile
+bundle: contact_info
+label: 'Tỉnh/Thành phố'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      list_of_provinces: list_of_provinces
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: 5a4480b2-38a0-4a6f-8dfb-f65b54879e45
+langcode: vi
+status: true
+dependencies:
+  module:
+    - user
+id: user.user
+target_entity_type_id: user
+target_bundle: user
+default_langcode: site_default
+language_alterable: false

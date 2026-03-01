@@ -1,0 +1,19 @@
+uuid: 1ca44d48-c951-448c-b6e2-762f4ede7fba
+langcode: vi
+status: true
+dependencies:
+  module:
+    - link
+    - profile
+id: profile.field_linkedin_profile
+field_name: field_linkedin_profile
+entity_type: profile
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

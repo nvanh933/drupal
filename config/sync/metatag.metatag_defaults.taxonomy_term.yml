@@ -1,0 +1,12 @@
+uuid: cdb83216-6780-4424-9eb1-93a252442284
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 92bXZdyYJ5xqukdfmGRr_CYcwm1vfuS8b8aJ7X_G7E0
+id: taxonomy_term
+label: 'Taxonomy term'
+tags:
+  description: '[term:description]'
+  shortlink: '[site:base-url]/taxonomy/term/[term:tid]'
+  title: '[term:name]'

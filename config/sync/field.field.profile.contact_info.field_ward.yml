@@ -1,0 +1,29 @@
+uuid: 1491d583-3ae8-4917-a9ee-00bd17f73aba
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ward
+    - profile.type.contact_info
+    - taxonomy.vocabulary.list_of_provinces
+id: profile.contact_info.field_ward
+field_name: field_ward
+entity_type: profile
+bundle: contact_info
+label: Phường/Xã
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      list_of_provinces: list_of_provinces
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

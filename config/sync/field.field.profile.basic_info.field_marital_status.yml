@@ -1,0 +1,29 @@
+uuid: d845d939-eff2-437f-9980-621d89c83d83
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_marital_status
+    - profile.type.basic_info
+    - taxonomy.vocabulary.marital_status
+id: profile.basic_info.field_marital_status
+field_name: field_marital_status
+entity_type: profile
+bundle: basic_info
+label: 'Tình trạng hôn nhân'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      marital_status: marital_status
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

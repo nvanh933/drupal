@@ -1,0 +1,64 @@
+#################################################
+# Drupal 11 - Composer based project
+#################################################
+
+# Composer
+/vendor/
+/.composer/
+composer.phar
+
+# Core (managed by Composer)
+/web/core/
+
+# Contrib
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+
+# Libraries
+/web/libraries/
+
+# Node
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# Environment
+/web/sites/*/settings*.php
+/web/sites/*/services*.yml
+
+# Files (public + private)
+/web/sites/*/files/
+/web/sites/*/private/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# PHPUnit
+/phpunit.xml
+/web/core/phpunit.xml
+
+# Drush
+.drush/
+
+# Env vars
+.env
+.env.*
+!.env.example
+
+# DDEV / Docker
+.ddev/
+docker-compose.override.yml

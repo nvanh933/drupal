@@ -1,0 +1,19 @@
+uuid: 87a2ef79-dcae-4cea-a783-b5b830c28b63
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_first_name
+    - profile.type.basic_info
+id: profile.basic_info.field_first_name
+field_name: field_first_name
+entity_type: profile
+bundle: basic_info
+label: Tên
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

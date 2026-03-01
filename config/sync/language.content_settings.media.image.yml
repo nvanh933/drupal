@@ -1,0 +1,11 @@
+uuid: 979c3be4-ae04-40b9-84c1-9abc63a7195a
+langcode: vi
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image
+target_entity_type_id: media
+target_bundle: image
+default_langcode: site_default
+language_alterable: false

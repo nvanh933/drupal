@@ -1,0 +1,22 @@
+uuid: c2fe9365-62ee-4aaa-95c3-e8ef7a260614
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vats
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: vats_content
+theme: vats
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

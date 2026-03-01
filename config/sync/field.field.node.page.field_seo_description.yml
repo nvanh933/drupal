@@ -1,0 +1,19 @@
+uuid: c905fee1-be01-41c1-99c6-a38b9740089b
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_description
+    - node.type.page
+id: node.page.field_seo_description
+field_name: field_seo_description
+entity_type: node
+bundle: page
+label: 'SEO Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

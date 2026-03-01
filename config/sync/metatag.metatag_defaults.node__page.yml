@@ -1,0 +1,14 @@
+uuid: 0163090e-a9ef-41d2-8baf-23f4e9accf8e
+langcode: vi
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Basic page'
+tags:
+  description: '[node:field_seo_description]'
+  og_description: '[node:field_seo_description]'
+  og_image: '[node:field_image]'
+  og_site_name: '[site:name]'
+  og_title: '[node:field_seo_title]'
+  og_url: '[current-page:url:absolute]'
+  title: '[node:field_seo_title]'

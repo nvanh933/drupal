@@ -1,0 +1,12 @@
+uuid: 18bf679f-24cb-4703-a556-8b99428084d4
+langcode: vi
+status: true
+dependencies: {  }
+id: social_links
+label: 'Social links'
+display_label: 'Mạng xã hội'
+multiple: false
+registration: false
+roles: {  }
+allow_revisions: false
+new_revision: false

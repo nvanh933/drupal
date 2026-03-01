@@ -1,0 +1,12 @@
+uuid: a55d9987-45cb-4c97-bb25-dfde31777283
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MvQPTbQx0Vxwy0ordSHyixdZmLCMpvMdLD69dlwkrKc
+id: user
+label: User
+tags:
+  description: '[site:name]'
+  shortlink: '[site:base-url]/user/[user:uid]'
+  title: '[user:display-name]'

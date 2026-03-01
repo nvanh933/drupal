@@ -1,0 +1,12 @@
+uuid: cd57eea8-7441-44e3-bf3f-e80e98c06c7d
+langcode: vi
+status: true
+dependencies: {  }
+id: contact_info
+label: 'Contact info'
+display_label: 'Thông tin liên hệ'
+multiple: false
+registration: false
+roles: {  }
+allow_revisions: false
+new_revision: false

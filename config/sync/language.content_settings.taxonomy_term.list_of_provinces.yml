@@ -1,0 +1,11 @@
+uuid: ba4eeaa5-16ef-47d5-8698-645c73a012f2
+langcode: vi
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.list_of_provinces
+id: taxonomy_term.list_of_provinces
+target_entity_type_id: taxonomy_term
+target_bundle: list_of_provinces
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,33 @@
+// =====================================
+// BASE
+// =====================================
+@import "base/variables";
+
+// Override Bootstrap theme colors
+$primary: $color-primary-500;
+$warning: $color-accent-500;
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+@import "base/reset";
+@import "base/typography";
+
+
+// =====================================
+// LAYOUTS
+// =====================================
+@import "layouts/header";
+@import "layouts/footer";
+
+
+// =====================================
+// COMPONENTS
+// =====================================
+@import "components/hero";
+
+
+// =====================================
+// PAGES
+// =====================================
+@import "pages/homepage";

@@ -1,0 +1,19 @@
+uuid: ade7293b-b4c0-487a-9dc3-8c71cbfc6c52
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_title
+    - node.type.page
+id: node.page.field_seo_title
+field_name: field_seo_title
+entity_type: node
+bundle: page
+label: 'SEO Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: 60446cb1-3984-4268-b44a-2a6ac85a6045
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+id: page
+label: Page
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  b80ecd38-cc04-4006-9071-c984dde67753:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: b80ecd38-cc04-4006-9071-c984dde67753
+    context_mapping:
+      node: node
+    bundles:
+      page: page
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

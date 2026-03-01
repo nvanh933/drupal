@@ -1,0 +1,19 @@
+uuid: 8278f267-16b2-4b3e-b05d-9516e19493c1
+langcode: vi
+status: true
+dependencies:
+  module:
+    - link
+    - profile
+id: profile.field_github_profile
+field_name: field_github_profile
+entity_type: profile
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

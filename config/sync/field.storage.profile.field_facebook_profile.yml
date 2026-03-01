@@ -1,0 +1,19 @@
+uuid: f5149063-935f-4afe-9017-6eecfc447015
+langcode: vi
+status: true
+dependencies:
+  module:
+    - link
+    - profile
+id: profile.field_facebook_profile
+field_name: field_facebook_profile
+entity_type: profile
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

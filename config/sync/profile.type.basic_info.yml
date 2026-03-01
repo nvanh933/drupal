@@ -1,0 +1,12 @@
+uuid: 8edcb779-a38f-4394-8688-305716c61ad5
+langcode: vi
+status: true
+dependencies: {  }
+id: basic_info
+label: 'Basic info'
+display_label: 'Thông tin cá nhân'
+multiple: false
+registration: false
+roles: {  }
+allow_revisions: false
+new_revision: false

@@ -1,0 +1,16 @@
+{
+  "name": "vats-theme",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "sass": "^1.70.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "swiper": "^12.1.2"
+  }
+}
