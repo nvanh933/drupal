@@ -2,8 +2,12 @@
 // IMPORT STYLES
 // ==============================
 import '../scss/main.scss';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+// Import Bootstrap.
+import 'bootstrap';
+
+// Import Bootstrap Icons.
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // ==============================
 // CORE (system-level logic)

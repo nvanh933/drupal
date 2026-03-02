@@ -52,8 +52,8 @@
   {% endif %}
 
   <div id="header" class="clearfix">
-    <div class="container">
-      <div id="site-logo">
+    <div class="container container-xl d-flex align-items-center justify-content-between">
+      <div id="site-logo" class="logo d-flex align-items-center">
         <a href="{{ front_page }}" title="{{ 'Trang chủ'|t }}">
           <img src="{{ base_path ~ directory }}/src/images/logo.svg" alt="{{ site_name }}" />
         </a>
@@ -61,16 +61,10 @@
       {% if page.header %}
         {{ page.header }}
       {% endif %}
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     </div>
   </div>
-
-  {% if page.main_navigation %}
-    <div id="main-navigation" class="clearfix">
-      <div class="container">
-        {{ page.main_navigation }}
-      </div>
-    </div>
-  {% endif %}
 
   {% if page.breadcrumb %}
     <div id="breadcrumb" class="clearfix">
