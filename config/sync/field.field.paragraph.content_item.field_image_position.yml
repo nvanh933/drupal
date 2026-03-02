@@ -1,0 +1,21 @@
+uuid: b57428da-c44d-4228-b106-c3ddfa2edbde
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.content_item
+  module:
+    - options
+id: paragraph.content_item.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: content_item
+label: 'Image position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

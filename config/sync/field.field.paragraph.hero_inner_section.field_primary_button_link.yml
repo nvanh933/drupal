@@ -1,0 +1,23 @@
+uuid: 73d98dbe-44d9-4ccc-b3b9-e80fae124560
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_primary_button_link
+    - paragraphs.paragraphs_type.hero_inner_section
+  module:
+    - link
+id: paragraph.hero_inner_section.field_primary_button_link
+field_name: field_primary_button_link
+entity_type: paragraph
+bundle: hero_inner_section
+label: 'Primary button link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

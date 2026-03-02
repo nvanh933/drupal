@@ -1,0 +1,39 @@
+uuid: 3f784c51-2152-4190-942c-36449d118fe8
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_team_item.field_description
+    - field.field.paragraph.our_team_item.field_image
+    - field.field.paragraph.our_team_item.field_title
+    - paragraphs.paragraphs_type.our_team_item
+id: paragraph.our_team_item.default
+targetEntityType: paragraph
+bundle: our_team_item
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

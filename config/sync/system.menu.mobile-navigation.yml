@@ -1,0 +1,8 @@
+uuid: 68dfb2e1-2666-4c19-b963-2384ea0d57fb
+langcode: vi
+status: true
+dependencies: {  }
+id: mobile-navigation
+label: 'Mobile navigation'
+description: ''
+locked: false

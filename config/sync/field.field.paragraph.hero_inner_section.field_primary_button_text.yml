@@ -1,0 +1,19 @@
+uuid: 781e58bd-fa1a-47b5-bff3-dbd6ab2814ac
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_primary_button_text
+    - paragraphs.paragraphs_type.hero_inner_section
+id: paragraph.hero_inner_section.field_primary_button_text
+field_name: field_primary_button_text
+entity_type: paragraph
+bundle: hero_inner_section
+label: 'Primary button text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

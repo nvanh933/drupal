@@ -1,0 +1,10 @@
+uuid: 297b176f-e143-4301-856a-160f8d36233e
+langcode: vi
+status: true
+dependencies: {  }
+id: our_values_item
+label: 'Our Values - Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

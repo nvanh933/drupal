@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.landing_page.field_image
     - field.field.node.landing_page.field_metatag
+    - field.field.node.landing_page.field_sections
     - field.field.node.landing_page.field_seo_description
     - field.field.node.landing_page.field_seo_title
     - node.type.landing_page
@@ -12,6 +13,7 @@ dependencies:
     - field_group
     - media_library
     - metatag
+    - paragraphs
     - path
     - scheduler
 third_party_settings:
@@ -19,6 +21,7 @@ third_party_settings:
     group_layout:
       children:
         - group_content
+        - group_sections
         - group_seo
       label: Layout
       region: content
@@ -53,6 +56,22 @@ third_party_settings:
         - field_seo_title
         - field_seo_description
       label: SEO
+      region: content
+      parent_name: group_layout
+      weight: 12
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_sections:
+      children:
+        - field_sections
+      label: Sections
       region: content
       parent_name: group_layout
       weight: 11
@@ -90,6 +109,24 @@ content:
     settings:
       sidebar: true
       use_details: false
+    third_party_settings: {  }
+  field_sections:
+    type: paragraphs
+    weight: 26
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
   field_seo_description:
     type: string_textarea

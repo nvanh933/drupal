@@ -1,0 +1,19 @@
+uuid: 7a1e7782-309c-4e9d-986e-3a9e937e4cf4
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.company_overview_section
+id: paragraph.company_overview_section.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: company_overview_section
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

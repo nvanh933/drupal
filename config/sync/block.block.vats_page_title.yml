@@ -1,0 +1,24 @@
+uuid: 892c6937-c0c5-4268-94d1-6d85eafb0928
+langcode: vi
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vats
+id: vats_page_title
+theme: vats
+region: content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

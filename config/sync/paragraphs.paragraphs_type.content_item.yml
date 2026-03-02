@@ -1,0 +1,10 @@
+uuid: e1e542cd-bae4-4b3c-b47f-009153bb7cc6
+langcode: vi
+status: true
+dependencies: {  }
+id: content_item
+label: 'Content - Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: 025c8de5-cc19-41b3-bd77-4b736e18eb1f
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.our_values_item
+id: paragraph.our_values_item.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: our_values_item
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

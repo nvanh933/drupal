@@ -1,0 +1,20 @@
+uuid: 14697ccc-4cf2-4f86-aad7-6f2fee67f85a
+langcode: vi
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vats
+id: vats_messages
+theme: vats
+region: content
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,86 @@
+uuid: 813c7950-414f-42c0-a344-6ba7a312b4da
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sections
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.company_overview_section
+    - paragraphs.paragraphs_type.content_section
+    - paragraphs.paragraphs_type.cta_section
+    - paragraphs.paragraphs_type.features_section
+    - paragraphs.paragraphs_type.hero_inner_section
+    - paragraphs.paragraphs_type.hero_section
+    - paragraphs.paragraphs_type.our_team_section
+    - paragraphs.paragraphs_type.our_values_section
+    - paragraphs.paragraphs_type.testimonials_section
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_sections
+field_name: field_sections
+entity_type: node
+bundle: landing_page
+label: Sections
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero_section: hero_section
+      features_section: features_section
+      content_section: content_section
+      cta_section: cta_section
+      hero_inner_section: hero_inner_section
+      testimonials_section: testimonials_section
+      company_overview_section: company_overview_section
+      our_values_section: our_values_section
+      our_team_section: our_team_section
+    negate: 0
+    target_bundles_drag_drop:
+      company_overview_section:
+        weight: 14
+        enabled: true
+      content_item:
+        weight: 9
+        enabled: false
+      content_section:
+        weight: 8
+        enabled: true
+      cta_section:
+        weight: 9
+        enabled: true
+      feature_item:
+        weight: 6
+        enabled: false
+      features_section:
+        weight: 3
+        enabled: true
+      hero_inner_section:
+        weight: 10
+        enabled: true
+      hero_section:
+        weight: 2
+        enabled: true
+      our_team_item:
+        weight: 23
+        enabled: false
+      our_team_section:
+        weight: 24
+        enabled: true
+      our_values_item:
+        weight: 13
+        enabled: false
+      our_values_section:
+        weight: 22
+        enabled: true
+      testimonial_item:
+        weight: 9
+        enabled: false
+      testimonials_section:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

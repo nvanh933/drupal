@@ -1,0 +1,85 @@
+uuid: 56da7df1-080a-4123-942c-5d5ccacb0884
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_section.field_heading
+    - field.field.paragraph.hero_section.field_image
+    - field.field.paragraph.hero_section.field_primary_button_link
+    - field.field.paragraph.hero_section.field_primary_button_text
+    - field.field.paragraph.hero_section.field_secondary_button_link
+    - field.field.paragraph.hero_section.field_secondary_button_text
+    - field.field.paragraph.hero_section.field_subheading
+    - paragraphs.paragraphs_type.hero_section
+  module:
+    - link
+id: paragraph.hero_section.default
+targetEntityType: paragraph
+bundle: hero_section
+mode: default
+content:
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_primary_button_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_primary_button_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_secondary_button_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_secondary_button_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_subheading:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

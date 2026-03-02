@@ -1,0 +1,10 @@
+uuid: fd630099-b909-4f40-9e30-6b3090df22d4
+langcode: vi
+status: true
+dependencies: {  }
+id: content_section
+label: 'Content - Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -22,7 +22,7 @@ settings:
   handler_settings: {  }
   file_directory: 'avatars/[current-user:uuid]'
   file_extensions: 'png jpg jpeg webp'
-  max_filesize: '2 MB'
+  max_filesize: ''
   max_resolution: ''
   min_resolution: ''
   alt_field: false

@@ -1,0 +1,37 @@
+uuid: 0e94ef05-0e6a-4d9e-9680-532d55acdfa2
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_features
+    - paragraphs.paragraphs_type.feature_item
+    - paragraphs.paragraphs_type.features_section
+  module:
+    - entity_reference_revisions
+id: paragraph.features_section.field_features
+field_name: field_features
+entity_type: paragraph
+bundle: features_section
+label: Features
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      feature_item: feature_item
+    negate: 0
+    target_bundles_drag_drop:
+      feature_item:
+        weight: 4
+        enabled: true
+      features_section:
+        weight: 5
+        enabled: false
+      hero_section:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

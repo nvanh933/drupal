@@ -1,0 +1,24 @@
+uuid: 8610bb3f-7260-4102-9be7-8d2bacf619c6
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.content_item
+  module:
+    - text
+id: paragraph.content_item.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: content_item
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

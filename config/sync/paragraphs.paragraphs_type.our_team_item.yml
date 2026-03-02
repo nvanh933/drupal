@@ -1,0 +1,10 @@
+uuid: 30fac7ff-728a-4d64-8ce5-0393daebf15c
+langcode: vi
+status: true
+dependencies: {  }
+id: our_team_item
+label: 'Our Team - Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

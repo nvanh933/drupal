@@ -1,0 +1,49 @@
+uuid: 049238c5-8143-40bf-832b-8be948fbf6fc
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.content_item
+    - paragraphs.paragraphs_type.content_section
+  module:
+    - entity_reference_revisions
+id: paragraph.content_section.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: content_section
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content_item: content_item
+    negate: 0
+    target_bundles_drag_drop:
+      content_item:
+        weight: 9
+        enabled: true
+      content_section:
+        weight: 8
+        enabled: false
+      feature_item:
+        weight: 10
+        enabled: false
+      features_section:
+        weight: 11
+        enabled: false
+      hero_section:
+        weight: 12
+        enabled: false
+      testimonial_item:
+        weight: 13
+        enabled: false
+      testimonials_section:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

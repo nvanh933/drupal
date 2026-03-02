@@ -1,0 +1,19 @@
+uuid: f212f5bb-7efd-466d-8e82-929952c2378d
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.testimonials_section
+id: paragraph.testimonials_section.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: testimonials_section
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

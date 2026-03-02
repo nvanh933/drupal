@@ -1,0 +1,19 @@
+uuid: d8d5ba9e-997a-47fa-931d-0651780377f4
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.our_team_item
+id: paragraph.our_team_item.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: our_team_item
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

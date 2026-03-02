@@ -1,0 +1,10 @@
+uuid: 06e5d75c-b85c-4c3e-b1a3-420ec319c74f
+langcode: vi
+status: true
+dependencies: {  }
+id: company_overview_section
+label: 'Company Overview - Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

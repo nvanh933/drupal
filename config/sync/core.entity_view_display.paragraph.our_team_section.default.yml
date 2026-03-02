@@ -1,0 +1,24 @@
+uuid: ae71d352-e7b1-4416-8ac3-fe3a49bcf229
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_team_section.field_our_team
+    - paragraphs.paragraphs_type.our_team_section
+  module:
+    - entity_reference_revisions
+id: paragraph.our_team_section.default
+targetEntityType: paragraph
+bundle: our_team_section
+mode: default
+content:
+  field_our_team:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

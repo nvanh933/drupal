@@ -1,0 +1,70 @@
+uuid: cb084327-8670-4059-9f87-12edc11dff62
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_our_team
+    - paragraphs.paragraphs_type.our_team_item
+    - paragraphs.paragraphs_type.our_team_section
+  module:
+    - entity_reference_revisions
+id: paragraph.our_team_section.field_our_team
+field_name: field_our_team
+entity_type: paragraph
+bundle: our_team_section
+label: 'Our Team'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      our_team_item: our_team_item
+    negate: 0
+    target_bundles_drag_drop:
+      company_overview_section:
+        weight: 15
+        enabled: false
+      content_item:
+        weight: 16
+        enabled: false
+      content_section:
+        weight: 17
+        enabled: false
+      cta_section:
+        weight: 18
+        enabled: false
+      feature_item:
+        weight: 19
+        enabled: false
+      features_section:
+        weight: 20
+        enabled: false
+      hero_inner_section:
+        weight: 21
+        enabled: false
+      hero_section:
+        weight: 22
+        enabled: false
+      our_team_item:
+        weight: 23
+        enabled: true
+      our_team_section:
+        weight: 24
+        enabled: false
+      our_values_item:
+        weight: 25
+        enabled: false
+      our_values_section:
+        weight: 26
+        enabled: false
+      testimonial_item:
+        weight: 27
+        enabled: false
+      testimonials_section:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

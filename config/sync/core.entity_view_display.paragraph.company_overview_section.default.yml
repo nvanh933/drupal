@@ -1,0 +1,50 @@
+uuid: 9cf44f10-df14-4124-b0ac-bd0a84b5f90a
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.company_overview_section.field_body
+    - field.field.paragraph.company_overview_section.field_heading
+    - field.field.paragraph.company_overview_section.field_image
+    - field.field.paragraph.company_overview_section.field_image_position
+    - paragraphs.paragraphs_type.company_overview_section
+  module:
+    - options
+    - text
+id: paragraph.company_overview_section.default
+targetEntityType: paragraph
+bundle: company_overview_section
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image_position:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

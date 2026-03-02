@@ -1,0 +1,19 @@
+uuid: e606aeca-4195-4763-81ad-8d414ceb3cfb
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.our_team_item
+id: paragraph.our_team_item.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: our_team_item
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 4a8d1f89-0458-45d4-a2fb-7096edc49817
+langcode: vi
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_primary_button_link
+field_name: field_primary_button_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

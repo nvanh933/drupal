@@ -1,0 +1,21 @@
+uuid: 52683c2c-8cc3-4adb-868d-bb06c918fe45
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.company_overview_section
+  module:
+    - options
+id: paragraph.company_overview_section.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: company_overview_section
+label: 'Image position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

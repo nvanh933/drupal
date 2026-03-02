@@ -1,0 +1,50 @@
+uuid: ba2c26b6-71be-4287-9b55-ee42c416984e
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.company_overview_section.field_body
+    - field.field.paragraph.company_overview_section.field_heading
+    - field.field.paragraph.company_overview_section.field_image
+    - field.field.paragraph.company_overview_section.field_image_position
+    - paragraphs.paragraphs_type.company_overview_section
+  module:
+    - media_library
+    - text
+id: paragraph.company_overview_section.default
+targetEntityType: paragraph
+bundle: company_overview_section
+mode: default
+content:
+  field_body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_image_position:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

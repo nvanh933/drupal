@@ -1,0 +1,63 @@
+uuid: 5c3d589e-cc56-442f-8886-f100b86891f3
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_inner_section.field_background_image
+    - field.field.paragraph.hero_inner_section.field_heading
+    - field.field.paragraph.hero_inner_section.field_primary_button_link
+    - field.field.paragraph.hero_inner_section.field_primary_button_text
+    - field.field.paragraph.hero_inner_section.field_subheading
+    - paragraphs.paragraphs_type.hero_inner_section
+  module:
+    - link
+id: paragraph.hero_inner_section.default
+targetEntityType: paragraph
+bundle: hero_inner_section
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_primary_button_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_primary_button_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_subheading:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

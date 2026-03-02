@@ -1,0 +1,10 @@
+uuid: 8ddb484d-7d99-4d71-9b77-7a3928589249
+langcode: vi
+status: true
+dependencies: {  }
+id: hero_inner_section
+label: 'Hero Inner - Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
