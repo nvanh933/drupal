@@ -3,8 +3,11 @@
 // ==============================
 import '../scss/main.scss';
 
-// Import Bootstrap.
-import 'bootstrap';
+// Import Bootstrap CSS.
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Import Bootstrap JS bundle.
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // Import Bootstrap Icons.
 import 'bootstrap-icons/font/bootstrap-icons.css';
