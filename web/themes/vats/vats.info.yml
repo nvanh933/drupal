@@ -9,7 +9,6 @@ libraries:
 regions:
   top_page: 'Page top'
   header: 'Header'
-  main_navigation: 'Main navigation'
   mobile_page: 'Mobile navigation'
   breadcrumb: 'Breadcrumb'
   content: 'Content'
