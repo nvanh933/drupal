@@ -1,0 +1,11 @@
+uuid: afaefbf4-03bd-4f14-a868-a0283b132596
+langcode: vi
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page
+target_entity_type_id: node
+target_bundle: landing_page
+default_langcode: site_default
+language_alterable: false

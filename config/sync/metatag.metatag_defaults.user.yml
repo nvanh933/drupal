@@ -8,5 +8,6 @@ id: user
 label: User
 tags:
   description: '[site:name]'
+  robots: 'noindex, nofollow'
   shortlink: '[site:base-url]/user/[user:uid]'
   title: '[user:display-name]'

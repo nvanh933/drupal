@@ -1,0 +1,3 @@
+vats.settings:
+  type: theme_settings
+  label: 'VATS theme settings'

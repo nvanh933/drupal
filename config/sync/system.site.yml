@@ -1,14 +1,14 @@
 _core:
   default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
 langcode: en
-uuid: 5c31b3b0-75f1-4ff7-bd6c-5ebcd0e5928a
-name: 'Data Privacy Platform'
+uuid: 905b90c6-b30a-4f12-9e64-0f3bfbb29b06
+name: 'Drupal Core Studio'
 mail: noreply.vats@gmail.com
-slogan: 'Giải pháp quản trị và tuân thủ AI có trách nhiệm'
+slogan: 'Think Drupal. Think Scale.'
 page:
   403: ''
   404: ''
-  front: /node/3
+  front: /
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: vi

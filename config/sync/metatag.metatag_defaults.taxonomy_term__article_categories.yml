@@ -1,0 +1,11 @@
+uuid: 717be888-7c59-4ebc-a04b-dfe9b359c104
+langcode: vi
+status: true
+dependencies: {  }
+id: taxonomy_term__article_categories
+label: 'Taxonomy term: Article Categories'
+tags:
+  og_description: '[term:description]'
+  og_site_name: '[site:name]'
+  og_title: '[term:name]'
+  og_url: '[current-page:url:absolute]'

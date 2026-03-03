@@ -1,0 +1,8 @@
+uuid: 38880b60-5e77-4ed5-909c-cd11d3b0f784
+langcode: vi
+status: true
+dependencies: {  }
+id: taxonomy_term__tags
+label: 'Taxonomy term: Tags'
+tags:
+  robots: 'noindex, nofollow'

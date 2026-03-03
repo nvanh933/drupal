@@ -1,0 +1,11 @@
+uuid: a6e8bbfe-7e02-418d-9bfc-1343211e1c7d
+langcode: vi
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hero_section
+id: paragraph.hero_section
+target_entity_type_id: paragraph
+target_bundle: hero_section
+default_langcode: site_default
+language_alterable: false

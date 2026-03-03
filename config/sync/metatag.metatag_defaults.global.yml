@@ -9,5 +9,4 @@ label: Global
 tags:
   canonical_url: '[current-page:url:absolute]'
   description: '[site:slogan]'
-  robots: 'noindex, nofollow'
   title: '[current-page:title]'

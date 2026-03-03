@@ -1,0 +1,11 @@
+uuid: 8b8c0120-41a4-4e2f-b0d4-f4d31f5d88ef
+langcode: vi
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.testimonials_section
+id: paragraph.testimonials_section
+target_entity_type_id: paragraph
+target_bundle: testimonials_section
+default_langcode: site_default
+language_alterable: false

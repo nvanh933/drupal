@@ -10,6 +10,7 @@ regions:
   top_page: 'Page top'
   header: 'Header'
   mobile_page: 'Mobile navigation'
+  highlighted: 'Highlighted'
   breadcrumb: 'Breadcrumb'
   content: 'Content'
   sidebar_first: 'First sidebar'

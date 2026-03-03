@@ -1,0 +1,11 @@
+uuid: 8820d2f7-d035-4ac1-b8b7-313252cb78cb
+langcode: vi
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document
+target_entity_type_id: media
+target_bundle: document
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,11 @@
+uuid: 7b5549a9-10ca-485b-8f97-fb468b9b4396
+langcode: vi
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.feature_item
+id: paragraph.feature_item
+target_entity_type_id: paragraph
+target_bundle: feature_item
+default_langcode: site_default
+language_alterable: false

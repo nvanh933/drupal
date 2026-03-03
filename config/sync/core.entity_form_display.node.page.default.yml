@@ -10,64 +10,10 @@ dependencies:
     - field.field.node.page.field_seo_title
     - node.type.page
   module:
-    - field_group
     - media_library
     - metatag
     - path
-    - scheduler
     - text
-third_party_settings:
-  field_group:
-    group_layout:
-      children:
-        - group_content
-        - group_seo
-      label: Layout
-      region: content
-      parent_name: ''
-      weight: 10
-      format_type: tabs
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        direction: horizontal
-        width_breakpoint: 640
-    group_content:
-      children:
-        - field_image
-        - field_body
-      label: Content
-      region: content
-      parent_name: group_layout
-      weight: 7
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: open
-        description: ''
-        required_fields: true
-    group_seo:
-      children:
-        - field_seo_title
-        - field_seo_description
-      label: SEO
-      region: content
-      parent_name: group_layout
-      weight: 9
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
-        formatter: closed
-        description: ''
-        required_fields: true
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -81,7 +27,7 @@ content:
     third_party_settings: {  }
   field_body:
     type: text_textarea
-    weight: 11
+    weight: 8
     region: content
     settings:
       rows: 5
@@ -89,14 +35,14 @@ content:
     third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 10
+    weight: 7
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_metatag:
     type: metatag_firehose
-    weight: 9
+    weight: 6
     region: content
     settings:
       sidebar: true
@@ -132,8 +78,8 @@ content:
     settings: {  }
     third_party_settings: {  }
   publish_on:
-    type: datetime_timestamp_no_default
-    weight: 6
+    type: datetime_timestamp
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -149,7 +95,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 5
     region: content
     settings:
       display_label: true
@@ -173,8 +119,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
   unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 7
+    type: datetime_timestamp
+    weight: 27
     region: content
     settings: {  }
     third_party_settings: {  }

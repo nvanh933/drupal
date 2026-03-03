@@ -61,52 +61,64 @@
       {% if page.header %}
         {{ page.header }}
       {% endif %}
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-    </div>
-  </div>
-
-  {% if page.breadcrumb %}
-    <div id="breadcrumb" class="clearfix">
-      <div class="container">
-        {{ page.breadcrumb }}
-      </div>
-    </div>
-  {% endif %}
-
-  <div id="main" class="clearfix">
-    <div class="container">
-      <div class="row">
-          {% if page.sidebar_first %}
-            <div class="col-md-3">
-              <div class="sidebar-first" class="clearfix">
-                {{ page.sidebar_first }}
-              </div>
-            </div>
-          {% endif %}
-
-          <div class="{% if page.sidebar_first and page.sidebar_second %}col-md-6{% elseif page.sidebar_first or page.sidebar_second %}col-md-9{% else %}col-md-12{% endif %}">
-            {{ page.content }}
-          </div>
-
-          {% if page.sidebar_second %}
-            <div class="col-md-3">
-              <div class="sidebar-second" class="clearfix">
-                {{ page.sidebar_second }}
-              </div>
-            </div>
-          {% endif %}
+      <div id="mobile-nav-toogle">
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       </div>
     </div>
   </div>
 
-  {% if page.bottom_page %}
-    <div id="page-bottom" class="clearfix">
+  {% block body %}
+    {% if page.highlighted %}
+      <div id="highlighted" class="clearfix">
+        <div class="container">
+          {{ page.highlighted }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.breadcrumb %}
+      <div id="breadcrumb" class="clearfix">
+        <div class="container">
+          {{ page.breadcrumb }}
+        </div>
+      </div>
+    {% endif %}
+
+    <div id="main" class="clearfix">
       <div class="container">
-        {{ page.bottom_page }}
+        <div class="row">
+            {% if page.sidebar_first %}
+              <div class="col-md-3">
+                <div class="sidebar-first" class="clearfix">
+                  {{ page.sidebar_first }}
+                </div>
+              </div>
+            {% endif %}
+
+            <div class="{% if page.sidebar_first and page.sidebar_second %}col-md-6{% elseif page.sidebar_first or page.sidebar_second %}col-md-9{% else %}col-md-12{% endif %}">
+              {{ page.content }}
+            </div>
+
+            {% if page.sidebar_second %}
+              <div class="col-md-3">
+                <div class="sidebar-second" class="clearfix">
+                  {{ page.sidebar_second }}
+                </div>
+              </div>
+            {% endif %}
+        </div>
       </div>
     </div>
-  {% endif %}
+
+    {% if page.bottom_page %}
+      <div id="page-bottom" class="clearfix">
+        <div class="container">
+          {{ page.bottom_page }}
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
 
   <div id="footer" class="clearfix">
     <div class="container">

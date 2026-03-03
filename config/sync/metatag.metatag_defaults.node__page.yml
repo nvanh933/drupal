@@ -11,5 +11,4 @@ tags:
   og_site_name: '[site:name]'
   og_title: '[node:field_seo_title]'
   og_url: '[current-page:url:absolute]'
-  robots: 'index, follow'
   title: '[node:field_seo_title]'
