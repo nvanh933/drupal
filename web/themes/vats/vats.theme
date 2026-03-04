@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
 /**
  * @file
  * Functions to support theming.
@@ -41,14 +44,38 @@ function vats_page_attachments_alter(array &$attachments) {
 /**
  * Implements hook_form_FORM_ID_alter() for user_login_form.
  */
-function vats_form_user_login_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function vats_form_user_login_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['name']['#title'])) {
+    $form['name']['#title'] = new TranslatableMarkup('Tên đăng nhập');
+  }
+
+  if (isset($form['pass']['#title'])) {
+    $form['pass']['#title'] = new TranslatableMarkup('Mật khẩu');
+  }
+
+  if (isset($form['actions']['submit']['#value'])) {
+    $form['actions']['submit']['#value'] = new TranslatableMarkup('Đăng nhập');
+  }
+
   vats_add_primary_submit_class($form);
 }
 
 /**
  * Implements hook_form_FORM_ID_alter() for user_pass.
  */
-function vats_form_user_pass_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function vats_form_user_pass_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['name']['#title'])) {
+    $form['name']['#title'] = new TranslatableMarkup('Địa chỉ email');
+  }
+
+  if (isset($form['mail'])) {
+    unset($form['mail']);
+  }
+
+  if (isset($form['actions']['submit']['#value'])) {
+    $form['actions']['submit']['#value'] = new TranslatableMarkup('Gửi yêu cầu');
+  }
+
   vats_add_primary_submit_class($form);
 }
 
