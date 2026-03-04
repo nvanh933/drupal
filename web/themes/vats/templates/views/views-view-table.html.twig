@@ -35,11 +35,16 @@
   set classes = [
     'views-table',
     'views-view-table',
+    'table',
+    'table-striped',
+    'table-hover',
+    'align-middle',
     'cols-' ~ header|length,
     responsive ? 'responsive-enabled',
     sticky ? 'sticky-header',
   ]
 %}
+<div class="table-responsive">
 <table{{ attributes.addClass(classes) }}>
   {% if caption_needed %}
     <caption>
@@ -118,3 +123,4 @@
     {% endfor %}
   </tbody>
 </table>
+</div>

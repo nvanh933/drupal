@@ -42,7 +42,7 @@
  * @see html.html.twig
  */
 #}
-<div id="wrapper">
+<div id="wrapper" class="min-vh-100 d-flex flex-column">
   {% if page.top_page %}
     <div id="page-top" class="clearfix">
       <div class="container">
@@ -51,26 +51,29 @@
     </div>
   {% endif %}
 
-  <div id="header" class="clearfix">
-    <div class="container container-xl d-flex align-items-center justify-content-between">
+  <header id="header" class="border-bottom bg-white">
+    <div class="container container-xl d-flex align-items-center justify-content-between py-3">
       <div id="site-logo" class="logo d-flex align-items-center">
         <a href="{{ front_page }}" title="{{ 'Trang chủ'|t }}">
-          <img src="{{ base_path ~ directory }}/src/images/logo.svg" alt="{{ site_name }}" />
+          <img src="{{ base_path ~ directory }}/images/logo.svg" alt="{{ site_name }}" />
         </a>
       </div>
-      {% if page.header %}
-        {{ page.header }}
+      {% if page.header or page.primary_menu %}
+        <div class="header-region ms-auto">
+          {{ page.header }}
+          {{ page.primary_menu }}
+        </div>
       {% endif %}
       <div id="mobile-nav-toogle">
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       </div>
     </div>
-  </div>
+  </header>
 
   {% block body %}
     {% if page.highlighted %}
-      <div id="highlighted" class="clearfix">
+      <div id="highlighted" class="mb-3">
         <div class="container">
           {{ page.highlighted }}
         </div>
@@ -78,31 +81,31 @@
     {% endif %}
 
     {% if page.breadcrumb %}
-      <div id="breadcrumb" class="clearfix">
+      <div id="breadcrumb" class="mb-3">
         <div class="container">
           {{ page.breadcrumb }}
         </div>
       </div>
     {% endif %}
 
-    <div id="main" class="clearfix">
+    <div id="main" class="flex-grow-1 py-4">
       <div class="container">
-        <div class="row">
+        <div class="row g-4">
             {% if page.sidebar_first %}
-              <div class="col-md-3">
-                <div class="sidebar-first" class="clearfix">
+              <div class="col-12 col-lg-3">
+                <div class="sidebar-first clearfix">
                   {{ page.sidebar_first }}
                 </div>
               </div>
             {% endif %}
 
-            <div class="{% if page.sidebar_first and page.sidebar_second %}col-md-6{% elseif page.sidebar_first or page.sidebar_second %}col-md-9{% else %}col-md-12{% endif %}">
+            <div class="{% if page.sidebar_first and page.sidebar_second %}col-12 col-lg-6{% elseif page.sidebar_first or page.sidebar_second %}col-12 col-lg-9{% else %}col-12{% endif %}">
               {{ page.content }}
             </div>
 
             {% if page.sidebar_second %}
-              <div class="col-md-3">
-                <div class="sidebar-second" class="clearfix">
+              <div class="col-12 col-lg-3">
+                <div class="sidebar-second clearfix">
                   {{ page.sidebar_second }}
                 </div>
               </div>
@@ -120,7 +123,7 @@
     {% endif %}
   {% endblock %}
 
-  <div id="footer" class="clearfix">
+  <div id="footer" class="mt-auto py-4 border-top">
     <div class="container">
       {% if page.footer_first %}
         {{ page.footer_first }}
@@ -136,7 +139,7 @@
     </div>
   </div>
 
-  <div id="copyright">
+  <div id="copyright" class="py-3 text-center">
     <div class="container">
       &copy; {{ "now"|date("Y") }} VATS. All rights reserved.
     </div>

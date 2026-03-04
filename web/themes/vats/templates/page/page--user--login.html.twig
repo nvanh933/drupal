@@ -1,1 +1,47 @@
-{% extends "page.html.twig" %}
+<div class="vats-login-page container-fluid p-0">
+  <div class="row g-0 vats-login-page__layout min-vh-100">
+    <div class="col-lg-7 d-none d-lg-block vats-login-page__visual position-relative">
+      <img
+        src="{{ base_path ~ directory }}/images/login/background.jpg"
+        alt="{{ site_name }}"
+        class="vats-login-page__bg-image"
+      />
+      <div class="vats-login-page__overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+      <div class="vats-login-page__visual-content position-absolute bottom-0 start-0 text-white">
+        <h1 class="display-6 fw-semibold mb-3">{{ site_name }}</h1>
+        <p class="mb-0 fs-5">{{ site_slogan }}</p>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-5 d-flex align-items-center justify-content-center vats-login-page__panel p-4 p-md-5">
+      <div class="card border-0 shadow-sm w-100 vats-login-page__card">
+        <div class="card-body p-4 p-md-5">
+          <div class="vats-login-page__top-actions mb-3">
+            <a href="{{ front_page }}" class="btn btn-link text-decoration-none px-0">
+              <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>{{ 'Quay lại trang chủ'|t }}
+            </a>
+          </div>
+
+          <div class="text-center mb-4 vats-login-page__header">
+            <a href="{{ front_page }}" class="d-inline-flex align-items-center justify-content-center mb-3" title="{{ 'Trang chủ'|t }}">
+              <img src="{{ base_path ~ directory }}/images/logo.svg" alt="{{ site_name }}" class="vats-login-page__logo" />
+            </a>
+            <h2 class="h4 mb-2">{{ 'Đăng nhập'|t }}</h2>
+            <p class="text-muted mb-0">{{ 'Vui lòng nhập thông tin tài khoản để tiếp tục.'|t }}</p>
+          </div>
+
+          <div class="vats-login-page__form">
+            {{ page.content }}
+          </div>
+
+          <div class="vats-login-page__actions mt-4 pt-3 border-top text-center">
+            <a href="{{ path('user.pass') }}" class="btn btn-link text-decoration-none">
+              {{ 'Quên mật khẩu'|t }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

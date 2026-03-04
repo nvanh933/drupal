@@ -14,7 +14,8 @@
 #}
 {%
   set classes = [
-    title_display == 'after' ? 'option',
+    title_display == 'after' ? 'form-check-label',
+    title_display != 'after' ? 'form-label',
     title_display == 'invisible' ? 'visually-hidden',
     required ? 'js-form-required',
     required ? 'form-required',

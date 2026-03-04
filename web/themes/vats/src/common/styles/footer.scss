@@ -1,0 +1,15 @@
+#footer {
+  background-color: var(--bs-gray-100);
+
+  .container {
+    display: grid;
+    gap: 1rem;
+  }
+}
+
+#copyright {
+  font-size: 0.875rem;
+  color: var(--bs-secondary-color);
+  border-top: 1px solid var(--bs-border-color);
+  background-color: var(--bs-white);
+}

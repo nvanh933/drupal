@@ -25,16 +25,22 @@
 {%
   set classes = [
     'taxonomy-term',
+    'card',
+    'border-0',
+    'shadow-sm',
+    'mb-4',
     'vocabulary-' ~ term.bundle|clean_class,
   ]
 %}
 <div{{ attributes.setAttribute('id', 'taxonomy-term-' ~ term.id).addClass(classes) }}>
+  <div class="card-body p-4">
   {{ title_prefix }}
   {% if name and view_mode != 'full' %}
-    <h2><a href="{{ url }}">{{ name }}</a></h2>
+    <h2 class="h4 mb-3"><a href="{{ url }}" class="text-decoration-none">{{ name }}</a></h2>
   {% endif %}
   {{ title_suffix }}
-  <div class="content">
+  <div class="content card-text">
     {{ content }}
+  </div>
   </div>
 </div>

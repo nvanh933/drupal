@@ -10,4 +10,11 @@
  * @see\Drupal\Core\Form\FormPreprocess::preprocessInput()
  */
 #}
-<input{{ attributes }} />{{ children }}
+{% set input_type = attributes.type ?: '' %}
+{% set classes = [
+	input_type in ['checkbox', 'radio'] ? 'form-check-input',
+	input_type in ['submit', 'button', 'reset'] ? 'btn',
+	input_type in ['submit', 'button', 'reset'] ? 'btn-primary',
+	input_type not in ['checkbox', 'radio', 'submit', 'button', 'reset', 'hidden', 'image'] ? 'form-control',
+] %}
+<input{{ attributes.addClass(classes) }} />{{ children }}

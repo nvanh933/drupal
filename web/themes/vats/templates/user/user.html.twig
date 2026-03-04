@@ -16,8 +16,10 @@
  * @see \Drupal\user\UserThemeHooks::preprocessUser()
  */
 #}
-<article{{ attributes.addClass('profile') }}>
+<article{{ attributes.addClass(['profile', 'card', 'border-0', 'shadow-sm', 'mb-4']) }}>
   {% if content %}
-    {{- content -}}
+    <div class="card-body p-4">
+      {{- content -}}
+    </div>
   {% endif %}
 </article>

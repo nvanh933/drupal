@@ -1,8 +1,31 @@
-global:
+vendor:
   css:
     theme:
-      dist/css/main.css: {}
+      dist/css/vendor.css: {}
   js:
-    dist/js/main.js: {}
+    dist/js/vendor.js: {}
+
+common:
+  css:
+    theme:
+      dist/css/common.css: {}
+  js:
+    dist/js/common.js: {}
   dependencies:
+    - vats/vendor
     - core/drupal
+    - core/jquery
+
+login-page:
+  css:
+    theme:
+      dist/css/login-page.css: {}
+  dependencies:
+    - vats/vendor
+
+reset-password-page:
+  css:
+    theme:
+      dist/css/reset-password-page.css: {}
+  dependencies:
+    - vats/vendor

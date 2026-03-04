@@ -17,6 +17,64 @@ function vats_preprocess_html(&$vars) {
  */
 function vats_preprocess_page(&$vars) {
   $vars['site_name'] = \Drupal::config('system.site')->get('name');
+  $vars['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if ($route_name === 'user.login') {
+    $vars['#attached']['library'][] = 'vats/login-page';
+  }
+  if ($route_name === 'user.pass') {
+    $vars['#attached']['library'][] = 'vats/reset-password-page';
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function vats_page_attachments_alter(array &$attachments) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (!in_array($route_name, ['user.login', 'user.pass'], TRUE)) {
+    return;
+  }
+
+  if (!empty($attachments['#attached']['library'])) {
+    $attachments['#attached']['library'] = array_values(array_diff(
+      $attachments['#attached']['library'],
+      ['vats/common']
+    ));
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for user_login_form.
+ */
+function vats_form_user_login_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  vats_add_primary_submit_class($form);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for user_pass.
+ */
+function vats_form_user_pass_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  vats_add_primary_submit_class($form);
+}
+
+/**
+ * Adds Bootstrap button classes to submit actions.
+ */
+function vats_add_primary_submit_class(array &$form) {
+  if (empty($form['actions']) || !is_array($form['actions'])) {
+    return;
+  }
+
+  foreach ($form['actions'] as &$action) {
+    if (!is_array($action) || (($action['#type'] ?? '') !== 'submit')) {
+      continue;
+    }
+
+    $action['#attributes']['class'][] = 'btn';
+    $action['#attributes']['class'][] = 'btn-primary';
+  }
 }
 
 /**

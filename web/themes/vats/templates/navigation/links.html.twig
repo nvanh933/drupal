@@ -39,13 +39,13 @@
       <h2{{ heading.attributes }}>{{ heading.text }}</h2>
     {%- endif -%}
   {%- endif -%}
-  <ul{{ attributes }}>
+  <ul{{ attributes.addClass(['nav', 'gap-2']) }}>
     {%- for item in links -%}
-      <li{{ item.attributes }}>
+      <li{{ item.attributes.addClass('nav-item') }}>
         {%- if item.link -%}
           {{ item.link }}
         {%- elseif item.text_attributes -%}
-          <span{{ item.text_attributes }}>{{ item.text }}</span>
+          <span{{ item.text_attributes.addClass('nav-link') }}>{{ item.text }}</span>
         {%- else -%}
           {{ item.text }}
         {%- endif -%}
