@@ -58,6 +58,11 @@ function vats_preprocess_page(array &$vars): void {
   if (isset($route_library_map[$route_name])) {
     $vars['#attached']['library'][] = $route_library_map[$route_name];
   }
+
+  $node = _vats_get_route_node();
+  if ($node && $node->bundle() === 'landing_page') {
+    $vars['#attached']['library'][] = 'vats/components';
+  }
 }
 
 /*
