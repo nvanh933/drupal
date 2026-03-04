@@ -8,6 +8,7 @@
 
 ## 2) Where to work (and where not to)
 - Primary custom work area:
+  - `web/modules/custom`
   - `web/themes/vats`
   - `config/sync` (only when config updates are intended)
 - Do NOT edit generated or third-party sources unless explicitly requested:
@@ -63,6 +64,6 @@
 - Route-specific pages still render and load intended libraries.
 
 ## 9) Git and delivery
-- Do not commit directly unless requested.
-- Summarize changed files and rationale clearly.
-- Mention any follow-up command user should run locally if needed.
+- Do not commit directly.
+- Do not summarize changed files.
+- Any follow-up command user should run locally.
