@@ -6,13 +6,6 @@
  */
 
 /**
- * Implements hook_preprocess_html().
- */
-function vats_preprocess_html(&$vars) {
-
-}
-
-/**
  * Implements hook_preprocess_page().
  */
 function vats_preprocess_page(&$vars) {
@@ -75,11 +68,4 @@ function vats_add_primary_submit_class(array &$form) {
     $action['#attributes']['class'][] = 'btn';
     $action['#attributes']['class'][] = 'btn-primary';
   }
-}
-
-/**
- * Implements hook_preprocess_node().
- */
-function vats_preprocess_node(&$vars) {
-
 }
