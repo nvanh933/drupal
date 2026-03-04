@@ -68,7 +68,7 @@ Enable `mod_rewrite` and restart Apache.
 - `vats.info.yml` — theme metadata and globally attached libraries
 - `vats.libraries.yml` — library definitions (`vendor`, `common`, route-specific page CSS)
 - `vats.theme` — preprocess/hooks and route/form-specific behavior
-- `vite.config.cjs` — Vite build config
+- `vite.config.mjs` — Vite build config
 - `src/` — source SCSS/JS
 - `dist/` — built assets consumed by Drupal
 
