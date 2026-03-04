@@ -13,19 +13,26 @@ common:
     dist/js/common.js: {}
   dependencies:
     - vats/vendor
-    - core/drupal
-    - core/jquery
 
-login-page:
+components:
   css:
     theme:
-      dist/css/login-page.css: {}
+      dist/css/components.css: {}
+  js:
+    dist/js/components.js: {}
   dependencies:
     - vats/vendor
 
-reset-password-page:
+user-login:
   css:
     theme:
-      dist/css/reset-password-page.css: {}
+      dist/css/user-login.css: {}
+  dependencies:
+    - vats/vendor
+
+user-password:
+  css:
+    theme:
+      dist/css/user-password.css: {}
   dependencies:
     - vats/vendor

@@ -1,2 +1,2 @@
-import './hero/hero.js';
-import './testimonial/testimonial.js';
+import './hero/hero.scss';
+import './features/features.scss';

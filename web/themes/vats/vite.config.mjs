@@ -9,10 +9,11 @@ export default defineConfig({
     manifest: false,
     rollupOptions: {
       input: {
-        vendor: resolve(import.meta.dirname, 'src/vendor/vendor.js'),
-        common: resolve(import.meta.dirname, 'src/common/common.js'),
-        'login-page': resolve(import.meta.dirname, 'src/pages/login/login-page.scss'),
-        'reset-password-page': resolve(import.meta.dirname, 'src/pages/reset-password/reset-password-page.scss'),
+        'vendor': resolve(import.meta.dirname, 'src/vendor/vendor.js'),
+        'common': resolve(import.meta.dirname, 'src/common/common.js'),
+        'components': resolve(import.meta.dirname, 'src/components/index.js'),
+        'user-login': resolve(import.meta.dirname, 'src/pages/user-login.scss'),
+        'user-password': resolve(import.meta.dirname, 'src/pages/user-password.scss'),
       },
       output: {
         entryFileNames: 'js/[name].js',

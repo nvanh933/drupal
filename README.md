@@ -1,9 +1,4 @@
-# Drupal Project (VATS) — LAMP Stack Guide
-
-This repository is a Drupal 11 project designed to run on a classic **LAMP stack**:
-- **Linux/macOS + Apache**
-- **MySQL/MariaDB**
-- **PHP 8.4+**
+# Drupal Project
 
 ## Project Overview
 - **CMS:** Drupal 11 (`drupal/core-recommended ^11.3`)
@@ -63,7 +58,7 @@ Enable `mod_rewrite` and restart Apache.
 - `cd web/themes/vats && npm run build`
 - `drush cr`
 
-## Theme (web/themes/vats)
+## Theme
 ### Important files
 - `vats.info.yml` — theme metadata and globally attached libraries
 - `vats.libraries.yml` — library definitions (`vendor`, `common`, route-specific page CSS)
@@ -75,12 +70,6 @@ Enable `mod_rewrite` and restart Apache.
 ### Build outputs
 - `src/vendor/vendor.js` -> `dist/js/vendor.js` + `dist/css/vendor.css`
 - `src/common/common.js` -> `dist/js/common.js` + `dist/css/common.css`
-
-## Audit Snapshot (2026-03-04)
-### Healthy
-- `composer validate --no-check-publish` passes
-- `composer audit --locked` reports no advisories
-- Custom logic is concentrated in theme layer (`web/themes/vats`)
 
 ## Useful Commands
 - `composer install`

@@ -1,6 +1,5 @@
-import './styles/common.scss';
-import '../components/index.scss';
-import '../components/index.js';
+import './styles/header.scss';
+import './styles/footer.scss';
 
 const initMobileNavigation = () => {
   const header = document.querySelector('#header');
