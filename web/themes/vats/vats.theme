@@ -2,6 +2,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\node\NodeInterface;
 
 /**
  * @file
@@ -22,6 +23,68 @@ function vats_preprocess_page(&$vars) {
   if ($route_name === 'user.pass') {
     $vars['#attached']['library'][] = 'vats/reset-password-page';
   }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function vats_theme_suggestions_page_alter(array &$suggestions, array $vars) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (strpos($route_name, 'entity.node.') !== 0) {
+    return;
+  }
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (!$node instanceof NodeInterface) {
+    return;
+  }
+
+  $bundle = $node->bundle();
+  $suggestions[] = 'page__node__' . $bundle;
+}
+
+/**
+ * Implements hook_theme_suggestions_region_alter().
+ */
+function vats_theme_suggestions_region_alter(array &$suggestions, array $vars) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (strpos($route_name, 'entity.node.') !== 0) {
+    return;
+  }
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (!$node instanceof NodeInterface) {
+    return;
+  }
+
+  $region = $vars['elements']['#region'] ?? '';
+  if ($region === 'content') {
+    $bundle = $node->bundle();
+    $suggestions[] = 'region__node__' . $bundle . '__content';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ */
+function vats_theme_suggestions_block_alter(array &$suggestions, array $vars) {
+  $plugin_id = $vars['elements']['#plugin_id'] ?? '';
+  if ($plugin_id !== 'system_main_block') {
+    return;
+  }
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (strpos($route_name, 'entity.node.') !== 0) {
+    return;
+  }
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (!$node instanceof NodeInterface) {
+    return;
+  }
+
+  $bundle = $node->bundle();
+  $suggestions[] = 'block__system_main_block__node__' . $bundle;
 }
 
 /**

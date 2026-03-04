@@ -59,46 +59,4 @@
  *
  */
 #}
-{%
-  set classes = [
-    'node',
-    'card',
-    'border-0',
-    'shadow-sm',
-    'mb-4',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
-
-<article{{ attributes.addClass(classes) }}>
-  <div class="card-body p-4">
-
-  {{ title_prefix }}
-  {% if label and view_mode != "full" %}
-    <h2{{ title_attributes.addClass(['h4', 'mb-3']) }}>
-      <a href="{{ url }}" rel="bookmark" class="text-decoration-none">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer class="node__meta d-flex align-items-center gap-2 text-muted small mb-3 pb-3 border-bottom">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
-  <div{{ content_attributes.addClass(['node__content', 'card-text']) }}>
-    {{ content }}
-  </div>
-
-  </div>
-
-</article>
+{{ content }}
