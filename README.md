@@ -58,18 +58,86 @@ Enable `mod_rewrite` and restart Apache.
 - `cd web/themes/vats && npm run build`
 - `drush cr`
 
-## Theme
-### Important files
-- `vats.info.yml` — theme metadata and globally attached libraries
-- `vats.libraries.yml` — library definitions (`vendor`, `common`, route-specific page CSS)
-- `vats.theme` — preprocess/hooks and route/form-specific behavior
-- `vite.config.mjs` — Vite build config
-- `src/` — source SCSS/JS
-- `dist/` — built assets consumed by Drupal
+## Theme (`web/themes/vats`)
 
-### Build outputs
-- `src/vendor/vendor.js` -> `dist/js/vendor.js` + `dist/css/vendor.css`
-- `src/common/common.js` -> `dist/js/common.js` + `dist/css/common.css`
+### Root files
+| File | Purpose |
+|---|---|
+| `vats.info.yml` | Theme metadata, regions, globally attached libraries |
+| `vats.libraries.yml` | Library definitions (`vendor`, `common`, `components`, route-specific) |
+| `vats.theme` | Preprocess hooks, template suggestions, form/attachment alters |
+| `vite.config.mjs` | Vite build configuration |
+| `package.json` | npm dependencies and build scripts |
+
+### Source (`src/`)
+```
+src/
+├── vendor/                     # Third-party CSS/JS bundle entry
+│   └── vendor.js               #   → Bootstrap, Bootstrap Icons, Swiper
+├── common/                     # Global site styles + JS
+│   ├── common.js               #   → imports styles/ + components/
+│   └── styles/
+│       ├── header.scss
+│       └── footer.scss
+├── components/                 # Reusable component styles + JS
+│   ├── index.js                #   → barrel import for all components
+│   ├── hero/
+│   │   └── hero.scss
+│   └── features/
+│       └── features.scss
+└── pages/                      # Route-specific SCSS (standalone, no common)
+    ├── user-login.scss
+    └── user-password.scss
+```
+
+### Build output (`dist/`)
+Built by Vite. Empty JS entry chunks are auto-removed.
+
+| Entry | CSS output | JS output |
+|---|---|---|
+| `src/vendor/vendor.js` | `dist/css/vendor.css` | `dist/js/vendor.js` |
+| `src/common/common.js` | `dist/css/common.css` | `dist/js/common.js` |
+| `src/components/index.js` | `dist/css/components.css` | `dist/js/components.js` (if non-empty) |
+| `src/pages/user-login.scss` | `dist/css/user-login.css` | — |
+| `src/pages/user-password.scss` | `dist/css/user-password.css` | — |
+
+### Templates (`templates/`)
+```
+templates/
+├── layout/
+│   ├── html.html.twig
+│   ├── page.html.twig                              # Base page layout (defines {% block body %})
+│   ├── region.html.twig
+│   ├── region--node--landing-page--content.html.twig
+│   └── maintenance-page.html.twig
+├── page/
+│   ├── page--user--login.html.twig                 # Standalone login layout
+│   ├── page--user--password.html.twig              # Standalone reset-password layout
+│   └── page--node--landing-page.html.twig          # Landing page (extends page, overrides body)
+├── block/
+│   ├── block.html.twig
+│   └── block--system-main-block--node--landing-page.html.twig
+├── paragraph/
+│   └── paragraph--hero-section.html.twig
+├── content/        # node.html.twig, page-title, taxonomy-term
+├── form/           # form element overrides (input, select, textarea, etc.)
+├── field/          # field.html.twig
+├── navigation/     # menu, breadcrumb, pager, links
+├── views/          # views-view, views-exposed-form, etc.
+├── misc/           # status-messages
+└── user/           # user.html.twig
+```
+
+### Template suggestion hooks (in `vats.theme`)
+| Hook | Suggestion pattern | Example file |
+|---|---|---|
+| `page_alter` | `page__node__{bundle}` | `page--node--landing-page.html.twig` |
+| `region_alter` | `region__node__{bundle}__content` | `region--node--landing-page--content.html.twig` |
+| `block_alter` | `block__system_main_block__node__{bundle}` | `block--system-main-block--node--landing-page.html.twig` |
+
+### Images
+- `images/logo.svg` — site logo
+- `images/login/` — login/reset-password page background
 
 ## Useful Commands
 - `composer install`
