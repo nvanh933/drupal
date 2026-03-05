@@ -1,0 +1,29 @@
+uuid: 81651df3-4a66-47de-b315-8ae529f5754b
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.listing_grid_item.field_description
+    - field.field.paragraph.listing_grid_item.field_title
+    - paragraphs.paragraphs_type.listing_grid_item
+id: paragraph.listing_grid_item.default
+targetEntityType: paragraph
+bundle: listing_grid_item
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,10 @@
+uuid: b97e652e-e039-4b61-808b-c502eb92996f
+langcode: vi
+status: true
+dependencies: {  }
+id: listing_grid_item
+label: 'Listing Grid - item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

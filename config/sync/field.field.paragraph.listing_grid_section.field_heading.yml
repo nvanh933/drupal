@@ -1,0 +1,19 @@
+uuid: 4ba4e042-b5b8-4b4f-8b3b-47cd61e570a6
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.listing_grid_section
+id: paragraph.listing_grid_section.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: listing_grid_section
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
