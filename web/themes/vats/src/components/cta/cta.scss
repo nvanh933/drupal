@@ -1,0 +1,47 @@
+.cta-section {
+  background-color: var(--bs-success-bg-subtle, #2d4a3e);
+  background-color: #3b5441;
+
+  &__title {
+    color: var(--bs-white);
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 28ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 52ch;
+    line-height: 1.55;
+  }
+
+  &__btn {
+    font-weight: 600;
+    min-width: 10rem;
+    border-radius: var(--bs-border-radius);
+    border-width: 2px;
+  }
+
+  &__btn:hover,
+  &__btn:focus-visible {
+    background-color: var(--bs-white);
+    color: #3b5441;
+    border-color: var(--bs-white);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cta-section {
+    &__actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+      width: 100%;
+      max-width: 18rem;
+    }
+  }
+}

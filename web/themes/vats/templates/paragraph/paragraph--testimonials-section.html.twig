@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for Testimonials Section paragraph (Swiper slider).
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--testimonials-section',
+    'testimonials-section',
+    'py-5',
+  ]
+%}
+
+{% set heading = paragraph.field_heading.value ?? '' %}
+
+<section{{ attributes.addClass(classes) }}>
+  <div class="container container-xl">
+    {% if heading %}
+      <h2 class="testimonials-section__title text-center mb-5">{{ heading }}</h2>
+    {% endif %}
+
+    <div class="testimonials-section__slider swiper js-testimonials-swiper">
+      <div class="swiper-wrapper">
+        {{ content.field_testimonials }}
+      </div>
+      <div class="testimonials-section__pagination swiper-pagination"></div>
+    </div>
+  </div>
+</section>

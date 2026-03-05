@@ -3,14 +3,18 @@ vendor:
     theme:
       dist/css/vendor.css: {}
   js:
-    dist/js/vendor.js: {}
+    dist/js/vendor.js:
+      attributes:
+        type: module
 
 common:
   css:
     theme:
       dist/css/common.css: {}
   js:
-    dist/js/common.js: {}
+    dist/js/common.js:
+      attributes:
+        type: module
   dependencies:
     - vats/vendor
 
@@ -19,7 +23,9 @@ components:
     theme:
       dist/css/components.css: {}
   js:
-    dist/js/components.js: {}
+    dist/js/components.js:
+      attributes:
+        type: module
   dependencies:
     - vats/vendor
 
