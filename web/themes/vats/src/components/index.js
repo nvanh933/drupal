@@ -1,2 +1,2 @@
-import './hero/hero.scss';
 import './features/features.scss';
+import './hero/hero.scss';

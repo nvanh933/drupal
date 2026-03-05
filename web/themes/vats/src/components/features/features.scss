@@ -1,0 +1,123 @@
+.features-section {
+  background-color: var(--bs-gray-100);
+
+  &__title {
+    color: var(--bs-primary);
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 36ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__subtitle {
+    color: var(--bs-secondary-color);
+    max-width: 56ch;
+  }
+
+  &__grid {
+    .field--name-field-features,
+    .field {
+      margin: 0;
+    }
+
+    .field--name-field-features > .field__items,
+    > .field__items,
+    .field__items {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 2rem;
+    }
+
+    .field--name-field-features > .field__items > .field__item,
+    > .field__items > .field__item,
+    .field__items > .field__item {
+      min-width: 0;
+      width: auto;
+      max-width: none;
+      margin: 0;
+    }
+  }
+}
+
+.feature-item {
+  height: 100%;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: var(--bs-border-radius-lg);
+    background-color: var(--bs-white);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: var(--bs-box-shadow-sm);
+
+    img,
+    svg,
+    picture {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    color: var(--bs-primary);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__description {
+    color: var(--bs-secondary-color);
+  }
+
+  &__cta {
+    color: var(--bs-primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__cta:hover,
+  &__cta:focus-visible {
+    color: var(--bs-primary-text-emphasis);
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .features-section {
+    &__grid {
+      .field--name-field-features > .field__items,
+      > .field__items,
+      .field__items {
+      gap: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .features-section {
+    &__grid {
+      .field--name-field-features > .field__items,
+      > .field__items,
+      .field__items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .features-section {
+    &__grid {
+      .field--name-field-features > .field__items,
+      > .field__items,
+      .field__items {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+      }
+    }
+  }
+}
