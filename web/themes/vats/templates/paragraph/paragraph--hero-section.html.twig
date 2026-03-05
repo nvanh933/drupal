@@ -26,25 +26,22 @@
       <div class="col-12 col-lg-6">
         <div class="hero-section__content pe-lg-4">
           {% if heading %}
-            <h1 class="hero-section__title display-4 fw-bold text-warning-emphasis mb-3">{{ heading }}</h1>
+            <h1 class="hero-section__title display-4 fw-bold mb-3">{{ heading }}</h1>
           {% endif %}
 
           {% if subheading %}
-            <p class="hero-section__eyebrow text-uppercase text-muted fs-2 lh-sm mb-2">{{ subheading }}</p>
+            <p class="hero-section__eyebrow fs-2 lh-sm mb-2">{{ subheading }}</p>
           {% endif %}
 
           <div class="hero-section__actions d-flex flex-wrap align-items-center gap-3">
             {% if primary_url and primary_text %}
-              <a href="{{ primary_url }}" class="hero-section__primary-btn btn btn-warning btn-lg px-4 rounded-pill">
+              <a href="{{ primary_url }}" class="hero-section__primary-btn btn btn-primary btn-lg px-4 rounded-pill">
                 {{ primary_text }}
               </a>
             {% endif %}
 
             {% if secondary_url and secondary_text %}
-              <a href="{{ secondary_url }}" class="hero-section__video-link btn btn-link text-warning text-decoration-none fs-5 p-0 d-inline-flex align-items-center gap-2">
-                <span class="hero-section__play-icon rounded-circle border border-warning d-inline-flex align-items-center justify-content-center">
-                  <i class="bi bi-play-fill"></i>
-                </span>
+              <a href="{{ secondary_url }}" class="hero-section__secondary-btn btn btn-secondary btn-lg px-4 rounded-pill">
                 {{ secondary_text }}
               </a>
             {% endif %}
