@@ -58,7 +58,7 @@ Enable `mod_rewrite` and restart Apache.
 - `cd web/themes/vats && npm run build`
 - `drush cr`
 
-## Theme (`web/themes/vats`)
+## Theme
 
 ### Root files
 | File | Purpose |
@@ -69,7 +69,7 @@ Enable `mod_rewrite` and restart Apache.
 | `vite.config.mjs` | Vite build configuration |
 | `package.json` | npm dependencies and build scripts |
 
-### Source (`src/`)
+### Source
 ```
 src/
 ├── vendor/                     # Third-party CSS/JS bundle entry
@@ -86,8 +86,10 @@ src/
 │   └── features/
 │       └── features.scss
 └── pages/                      # Route-specific SCSS (standalone, no common)
-    ├── user-login.scss
-    └── user-password.scss
+    ├── user-login/
+    │   └── style.scss
+    └── user-password/
+        └── style.scss
 ```
 
 ### Build output (`dist/`)
@@ -98,8 +100,6 @@ Built by Vite. Empty JS entry chunks are auto-removed.
 | `src/vendor/vendor.js` | `dist/css/vendor.css` | `dist/js/vendor.js` |
 | `src/common/common.js` | `dist/css/common.css` | `dist/js/common.js` |
 | `src/components/index.js` | `dist/css/components.css` | `dist/js/components.js` (if non-empty) |
-| `src/pages/user-login.scss` | `dist/css/user-login.css` | — |
-| `src/pages/user-password.scss` | `dist/css/user-password.css` | — |
 
 ### Templates (`templates/`)
 ```
@@ -108,7 +108,6 @@ templates/
 │   ├── html.html.twig
 │   ├── page.html.twig                              # Base page layout (defines {% block body %})
 │   ├── region.html.twig
-│   ├── region--node--landing-page--content.html.twig
 │   └── maintenance-page.html.twig
 ├── page/
 │   ├── page--user--login.html.twig                 # Standalone login layout
@@ -116,9 +115,7 @@ templates/
 │   └── page--node--landing-page.html.twig          # Landing page (extends page, overrides body)
 ├── block/
 │   ├── block.html.twig
-│   └── block--system-main-block--node--landing-page.html.twig
-├── paragraph/
-│   └── paragraph--hero-section.html.twig
+├── paragraph       # reusable content components
 ├── content/        # node.html.twig, page-title, taxonomy-term
 ├── form/           # form element overrides (input, select, textarea, etc.)
 ├── field/          # field.html.twig
@@ -134,10 +131,6 @@ templates/
 | `page_alter` | `page__node__{bundle}` | `page--node--landing-page.html.twig` |
 | `region_alter` | `region__node__{bundle}__content` | `region--node--landing-page--content.html.twig` |
 | `block_alter` | `block__system_main_block__node__{bundle}` | `block--system-main-block--node--landing-page.html.twig` |
-
-### Images
-- `images/logo.svg` — site logo
-- `images/login/` — login/reset-password page background
 
 ## Useful Commands
 - `composer install`
