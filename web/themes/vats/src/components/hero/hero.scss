@@ -1,4 +1,10 @@
 .hero-section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
   .container {
     position: relative;
     z-index: 1;
@@ -8,7 +14,7 @@
     max-width: 40rem;
   }
 
-  &__eyebrow {
+  &__description {
     letter-spacing: 0.03em;
   }
 
@@ -45,6 +51,8 @@
   .hero-section {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+    min-height: auto;
+    display: block;
 
     &:before,
     &:after {
