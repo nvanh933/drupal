@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Theme override for Content Section paragraph.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--content-section',
+    'content-section',
+    'py-5',
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }}>
+  <div class="container container-xl">
+    {{ content.field_content }}
+  </div>
+</section>

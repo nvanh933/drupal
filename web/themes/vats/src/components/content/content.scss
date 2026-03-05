@@ -1,0 +1,139 @@
+.content-section {
+  background-color: var(--bs-gray-100);
+}
+
+.content-item {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  & + & {
+    margin-top: 4rem;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 3rem;
+    align-items: center;
+  }
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__title {
+    color: var(--bs-primary);
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 18ch;
+  }
+
+  &__body {
+    color: var(--bs-secondary-color);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__media {
+    position: relative;
+    min-width: 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      bottom: -1.25rem;
+      width: 58%;
+      height: 2.25rem;
+      background: repeating-linear-gradient(
+        135deg,
+        var(--bs-danger) 0,
+        var(--bs-danger) 0.4rem,
+        transparent 0.4rem,
+        transparent 1.2rem
+      );
+      opacity: 0.9;
+      pointer-events: none;
+    }
+  }
+
+  &__media-frame {
+    position: relative;
+    border: 0.35rem solid var(--bs-danger);
+    border-radius: var(--bs-border-radius-xxl);
+    padding: 1rem;
+    background-color: var(--bs-white);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 1.25rem;
+      width: 4rem;
+      height: 0.9rem;
+      background: radial-gradient(circle, var(--bs-danger) 0.22rem, transparent 0.24rem) 0 0/1.33rem 0.9rem;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    img,
+    picture,
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: var(--bs-border-radius-xl);
+    }
+  }
+
+  &--image-left {
+    .content-item__content {
+      order: 2;
+    }
+
+    .content-item__media {
+      order: 1;
+    }
+  }
+
+  &--image-right {
+    .content-item__content {
+      order: 1;
+    }
+
+    .content-item__media {
+      order: 2;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .content-item {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    & + & {
+      margin-top: 3rem;
+    }
+
+    &__layout {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    &--image-left,
+    &--image-right {
+      .content-item__content,
+      .content-item__media {
+        order: initial;
+      }
+    }
+
+    &__media:before {
+      width: 65%;
+      left: -1rem;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Theme override for Content Item paragraph.
+ */
+#}
+{% set image_position = paragraph.field_image_position.value ?? 'right' %}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--content-item',
+    'content-item',
+    'content-item--image-' ~ image_position,
+  ]
+%}
+
+{% set title = paragraph.field_title.value ?? '' %}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="content-item__layout">
+    <div class="content-item__content">
+      {% if title %}
+        <h2 class="content-item__title mb-4">{{ title }}</h2>
+      {% endif %}
+
+      {% if content.field_body %}
+        <div class="content-item__body">{{ content.field_body }}</div>
+      {% endif %}
+    </div>
+
+    <div class="content-item__media">
+      <div class="content-item__media-frame">
+        {{ content.field_image }}
+      </div>
+    </div>
+  </div>
+</article>
