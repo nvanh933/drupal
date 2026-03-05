@@ -12,8 +12,8 @@ export default defineConfig({
         'vendor': resolve(import.meta.dirname, 'src/vendor/vendor.js'),
         'common': resolve(import.meta.dirname, 'src/common/common.js'),
         'components': resolve(import.meta.dirname, 'src/components/index.js'),
-        'user-login': resolve(import.meta.dirname, 'src/pages/user-login.scss'),
-        'user-password': resolve(import.meta.dirname, 'src/pages/user-password.scss'),
+        'user-login': resolve(import.meta.dirname, 'src/pages/user-login/style.scss'),
+        'user-password': resolve(import.meta.dirname, 'src/pages/user-password/style.scss'),
       },
       output: {
         entryFileNames: 'js/[name].js',
