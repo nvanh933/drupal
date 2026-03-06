@@ -1,7 +1,8 @@
+@use '../../common/styles/typography.scss' as typography;
+
 .features-section {
   &__heading {
-    font-weight: 700;
-    line-height: 1.2;
+    @include typography.heading();
     margin-left: auto;
     margin-right: auto;
   }
@@ -39,12 +40,11 @@
   }
 
   &__title {
-    font-weight: 700;
-    line-height: 1.2;
+    @include typography.title();
   }
 
   &__description {
-    line-height: 1.55;
+    @include typography.description();
   }
 
   &__cta {

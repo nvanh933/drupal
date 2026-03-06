@@ -1,3 +1,5 @@
+@use '../../common/styles/typography.scss' as typography;
+
 .hero-section {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -10,17 +12,13 @@
     z-index: 1;
   }
 
-  &__content {
-    max-width: 40rem;
+  &__heading {
+    @include typography.heading(3.5rem);
   }
 
   &__subheading {
+    @include typography.subheading();
     letter-spacing: 0.03em;
-  }
-
-  &__heading {
-    max-width: 16ch;
-    line-height: 1.15;
   }
 
   &__actions {
@@ -28,12 +26,10 @@
   }
 
   &__primary-btn {
-    font-weight: 700;
     min-width: 9rem;
   }
 
   &__secondary-btn {
-    font-weight: 700;
     min-width: 9rem;
   }
 
@@ -53,15 +49,6 @@
     padding-bottom: 2.5rem;
     min-height: auto;
     display: block;
-
-    &:before,
-    &:after {
-      opacity: 0.75;
-    }
-
-    &__heading {
-      max-width: none;
-    }
   }
 }
 

@@ -1,3 +1,5 @@
+import './styles/common.scss';
+import './styles/typography.scss';
 import './styles/header.scss';
 import './styles/footer.scss';
 

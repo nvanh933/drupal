@@ -1,3 +1,5 @@
+@use '../../common/styles/typography.scss' as typography;
+
 .content-item {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -18,12 +20,12 @@
   }
 
   &__title {
-    font-weight: 700;
-    line-height: 1.15;
-    max-width: 18ch;
+    @include typography.title();
   }
 
   &__description {
+    @include typography.description();
+
     p:last-child {
       margin-bottom: 0;
     }

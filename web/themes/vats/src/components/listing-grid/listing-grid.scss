@@ -1,7 +1,8 @@
+@use '../../common/styles/typography.scss' as typography;
+
 .listing-grid-section {
   &__heading {
-    font-weight: 700;
-    line-height: 1.2;
+    @include typography.heading();
   }
 
   &__grid {
@@ -15,12 +16,11 @@
   height: 100%;
 
   &__title {
-    font-weight: 700;
-    line-height: 1.2;
+    @include typography.title();
   }
 
   &__description {
-    line-height: 1.55;
+    @include typography.description();
   }
 }
 

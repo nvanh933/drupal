@@ -1,20 +1,18 @@
+@use '../../common/styles/typography.scss' as typography;
+
 .cta-section {
   background-color: var(--bs-success-bg-subtle, #2d4a3e);
   background-color: #3b5441;
 
   &__heading {
+    @include typography.heading();
     color: var(--bs-white);
-    font-weight: 700;
-    line-height: 1.2;
-    max-width: 28ch;
     margin-left: auto;
     margin-right: auto;
   }
 
   &__subheading {
-    color: rgba(255, 255, 255, 0.85);
-    max-width: 52ch;
-    line-height: 1.55;
+    @include typography.subheading();
   }
 
   &__btn {
@@ -41,7 +39,6 @@
 
     &__btn {
       width: 100%;
-      max-width: 18rem;
     }
   }
 }

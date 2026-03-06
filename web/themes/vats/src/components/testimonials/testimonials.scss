@@ -1,14 +1,13 @@
+@use '../../common/styles/typography.scss' as typography;
+
 .testimonials-section {
   &__heading {
-    font-weight: 700;
-    line-height: 1.2;
+    @include typography.heading();
   }
 
   &__slider {
-    max-width: 52rem;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
   }
 
   &__pagination {
@@ -20,12 +19,12 @@
     .swiper-pagination-bullet {
       width: 0.75rem;
       height: 0.75rem;
-      opacity: 1;
+      opacity: 0.5;
       transition: background-color 0.25s ease;
     }
 
     .swiper-pagination-bullet-active {
-
+      opacity: 1;
     }
   }
 }
@@ -48,12 +47,10 @@
   }
 
   &__title {
-    font-weight: 700;
-    font-size: 1.15rem;
+    @include typography.title();
   }
 
-  &__quote {
-    max-width: 48rem;
+  &__description {
     font-style: italic;
     line-height: 1.65;
     margin-left: auto;
