@@ -19,21 +19,17 @@
 <article{{ attributes.addClass(classes) }}>
   <div class="testimonial-item__inner text-center">
     {% if content.field_image %}
-      <div class="testimonial-item__avatar mb-4">
+      <div class="testimonial-item__media mb-4">
         {{ content.field_image }}
       </div>
     {% endif %}
 
     {% if title %}
-      <h3 class="testimonial-item__name mb-1">{{ title }}</h3>
+      <h3 class="testimonial-item__title mb-1">{{ title }}</h3>
     {% endif %}
 
     {% if description %}
-      <div class="testimonial-item__quote mt-4">
-        <span class="testimonial-item__quote-open" aria-hidden="true">&ldquo;</span>
-        <p class="testimonial-item__quote-text">{{ description }}</p>
-        <span class="testimonial-item__quote-close" aria-hidden="true">&rdquo;</span>
-      </div>
+      <p class="testimonial-item__description mt-4">{{ description }}</p>
     {% endif %}
   </div>
 </article>

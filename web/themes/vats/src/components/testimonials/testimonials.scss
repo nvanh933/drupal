@@ -1,11 +1,7 @@
 .testimonials-section {
-  background-color: var(--bs-white);
-
-  &__title {
-    color: var(--bs-warning);
+  &__heading {
     font-weight: 700;
     line-height: 1.2;
-    font-style: italic;
   }
 
   &__slider {
@@ -24,13 +20,12 @@
     .swiper-pagination-bullet {
       width: 0.75rem;
       height: 0.75rem;
-      background-color: var(--bs-gray-400);
       opacity: 1;
       transition: background-color 0.25s ease;
     }
 
     .swiper-pagination-bullet-active {
-      background-color: var(--bs-warning);
+
     }
   }
 }
@@ -40,7 +35,7 @@
     padding: 1rem 1rem 2rem;
   }
 
-  &__avatar {
+  &__media {
     display: inline-block;
 
     img,
@@ -52,69 +47,28 @@
     }
   }
 
-  &__name {
-    color: var(--bs-warning);
+  &__title {
     font-weight: 700;
-    font-size: 1.15rem;
-  }
-
-  &__role {
-    color: var(--bs-secondary-color);
-    font-size: 0.95rem;
-  }
-
-  &__stars {
-    display: inline-flex;
-    gap: 0.15rem;
-    color: var(--bs-warning);
     font-size: 1.15rem;
   }
 
   &__quote {
-    position: relative;
     max-width: 48rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  &__quote-open,
-  &__quote-close {
-    color: var(--bs-warning);
-    font-size: 2.25rem;
-    font-weight: 700;
-    line-height: 1;
-    vertical-align: text-top;
-  }
-
-  &__quote-open {
-    margin-right: 0.25rem;
-  }
-
-  &__quote-close {
-    margin-left: 0.25rem;
-  }
-
-  &__quote-text {
-    display: inline;
-    color: var(--bs-body-color);
     font-style: italic;
     line-height: 1.65;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media (max-width: 575.98px) {
   .testimonial-item {
-    &__avatar {
+    &__media {
       img,
       picture {
         width: 5rem;
         height: 5rem;
       }
-    }
-
-    &__quote-open,
-    &__quote-close {
-      font-size: 1.75rem;
     }
   }
 }

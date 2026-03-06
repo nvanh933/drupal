@@ -14,11 +14,11 @@
     max-width: 40rem;
   }
 
-  &__description {
+  &__subheading {
     letter-spacing: 0.03em;
   }
 
-  &__title {
+  &__heading {
     max-width: 16ch;
     line-height: 1.15;
   }
@@ -59,7 +59,7 @@
       opacity: 0.75;
     }
 
-    &__title {
+    &__heading {
       max-width: none;
     }
   }

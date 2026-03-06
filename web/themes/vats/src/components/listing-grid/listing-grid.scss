@@ -1,35 +1,13 @@
 .listing-grid-section {
-  background-color: var(--bs-gray-100);
-
-  &__title {
-    color: var(--bs-primary);
+  &__heading {
     font-weight: 700;
     line-height: 1.2;
-    max-width: 34ch;
   }
 
   &__grid {
-    .field--name-field-listing-item,
-    .field {
-      margin: 0;
-    }
-
-    .field--name-field-listing-item > .field__items,
-    > .field__items,
-    .field__items {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 2.75rem 2rem;
-    }
-
-    .field--name-field-listing-item > .field__items > .field__item,
-    > .field__items > .field__item,
-    .field__items > .field__item {
-      min-width: 0;
-      width: auto;
-      max-width: none;
-      margin: 0;
-    }
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.75rem 2rem;
   }
 }
 
@@ -37,13 +15,11 @@
   height: 100%;
 
   &__title {
-    color: var(--bs-primary);
     font-weight: 700;
     line-height: 1.2;
   }
 
   &__description {
-    color: var(--bs-secondary-color);
     line-height: 1.55;
   }
 }
@@ -51,11 +27,7 @@
 @media (max-width: 1199.98px) {
   .listing-grid-section {
     &__grid {
-      .field--name-field-listing-item > .field__items,
-      > .field__items,
-      .field__items {
-        gap: 2.25rem 1.5rem;
-      }
+      gap: 2.25rem 1.5rem;
     }
   }
 }
@@ -63,28 +35,20 @@
 @media (max-width: 991.98px) {
   .listing-grid-section {
     &__grid {
-      .field--name-field-listing-item > .field__items,
-      > .field__items,
-      .field__items {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 }
 
 @media (max-width: 575.98px) {
   .listing-grid-section {
-    &__title {
+    &__heading {
       margin-bottom: 2rem !important;
     }
 
     &__grid {
-      .field--name-field-listing-item > .field__items,
-      > .field__items,
-      .field__items {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1.5rem;
-      }
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
     }
   }
 }

@@ -2,7 +2,7 @@
   background-color: var(--bs-success-bg-subtle, #2d4a3e);
   background-color: #3b5441;
 
-  &__title {
+  &__heading {
     color: var(--bs-white);
     font-weight: 700;
     line-height: 1.2;
@@ -11,7 +11,7 @@
     margin-right: auto;
   }
 
-  &__subtitle {
+  &__subheading {
     color: rgba(255, 255, 255, 0.85);
     max-width: 52ch;
     line-height: 1.55;

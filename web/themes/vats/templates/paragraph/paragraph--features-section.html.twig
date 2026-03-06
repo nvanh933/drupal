@@ -14,16 +14,11 @@
 %}
 
 {% set heading = paragraph.field_heading.value ?? '' %}
-{% set subheading = paragraph.field_subheading.value ?? '' %}
 
 <section{{ attributes.addClass(classes) }}>
   <div class="container container-xl">
     {% if heading %}
-      <h2 class="features-section__title text-center mb-3">{{ heading }}</h2>
-    {% endif %}
-
-    {% if subheading %}
-      <p class="features-section__subtitle text-center mx-auto mb-5">{{ subheading }}</p>
+      <h2 class="features-section__heading text-center mb-5">{{ heading }}</h2>
     {% endif %}
 
     <div class="features-section__grid">
