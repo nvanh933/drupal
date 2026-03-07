@@ -1,0 +1,19 @@
+uuid: c5da424c-967e-4cdd-a9cb-a24fe54401c8
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.bluecheese_cta_section
+id: paragraph.bluecheese_cta_section.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: bluecheese_cta_section
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_sections
     - node.type.landing_page
+    - paragraphs.paragraphs_type.bluecheese_cta_section
     - paragraphs.paragraphs_type.company_overview_section
     - paragraphs.paragraphs_type.content_section
     - paragraphs.paragraphs_type.cta_section
@@ -38,11 +39,15 @@ settings:
       hero_inner_section: hero_inner_section
       testimonials_section: testimonials_section
       company_overview_section: company_overview_section
+      bluecheese_cta_section: bluecheese_cta_section
       our_values_section: our_values_section
       our_team_section: our_team_section
       listing_grid_section: listing_grid_section
     negate: 0
     target_bundles_drag_drop:
+      bluecheese_cta_section:
+        weight: 18
+        enabled: true
       company_overview_section:
         weight: 14
         enabled: true

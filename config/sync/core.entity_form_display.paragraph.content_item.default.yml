@@ -6,9 +6,14 @@ dependencies:
     - field.field.paragraph.content_item.field_body
     - field.field.paragraph.content_item.field_image
     - field.field.paragraph.content_item.field_image_position
+    - field.field.paragraph.content_item.field_primary_button_link
+    - field.field.paragraph.content_item.field_primary_button_text
+    - field.field.paragraph.content_item.field_secondary_button_link
+    - field.field.paragraph.content_item.field_secondary_button_text
     - field.field.paragraph.content_item.field_title
     - paragraphs.paragraphs_type.content_item
   module:
+    - link
     - media_library
     - text
 id: paragraph.content_item.default
@@ -36,6 +41,38 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_primary_button_link:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_primary_button_text:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_secondary_button_link:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_secondary_button_text:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_title:
     type: string_textfield
