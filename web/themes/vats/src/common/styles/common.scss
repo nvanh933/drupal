@@ -4,8 +4,6 @@ $color-body: #3c3c3c;
 $color-white: #fff;
 $scrollbar-width: 0.625rem;
 $transition-duration: 0.5s;
-$link-effect-height: 0.125rem;
-$link-effect-transition: 0.3s;
 
 html {
   scrollbar-color: $color-primary $color-track;
@@ -154,8 +152,10 @@ body {
 }
 
 .link-effect {
-  display: inline-block;
   position: relative;
+  color: $color-primary;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .link-effect-hover {
@@ -164,40 +164,22 @@ body {
     color: $color-primary;
   }
 
-  &::after,
-  &.active-menu::after {
+  &::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: $link-effect-height;
+    height: 0.125rem;
     bottom: 0;
     left: 0;
     background-color: $color-primary;
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform $link-effect-transition;
+    transition: transform $transition-duration;
   }
 
-  &.active-menu::after,
   &:hover::after {
     transform-origin: bottom left;
     transform: scaleX(1);
-  }
-
-  &.link-effect-active::after {
-    transform: none;
-  }
-}
-
-.link-effect-active {
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: $link-effect-height;
-    bottom: 0;
-    left: 0;
-    background-color: $color-primary;
   }
 }
 

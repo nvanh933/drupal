@@ -46,16 +46,6 @@
   &__description {
     @include typography.description();
   }
-
-  &__cta {
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  &__cta:hover,
-  &__cta:focus-visible {
-    text-decoration: underline;
-  }
 }
 
 @media (max-width: 1199.98px) {
