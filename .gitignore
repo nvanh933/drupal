@@ -64,3 +64,4 @@ Desktop.ini
 docker-compose.override.yml
 
 .github/
+.htaccess
