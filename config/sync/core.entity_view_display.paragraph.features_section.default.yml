@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.features_section.field_features
     - field.field.paragraph.features_section.field_heading
-    - field.field.paragraph.features_section.field_subheading
     - paragraphs.paragraphs_type.features_section
   module:
     - entity_reference_revisions
@@ -30,12 +29,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_subheading:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden: {  }
