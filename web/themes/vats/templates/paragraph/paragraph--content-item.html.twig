@@ -5,6 +5,11 @@
  */
 #}
 {% set image_position = paragraph.field_image_position.value ?? 'right' %}
+{% set primary_url = paragraph.field_primary_button_link.0.url ?? null %}
+{% set primary_text = paragraph.field_primary_button_text.value ?? '' %}
+{% set secondary_url = paragraph.field_secondary_button_link.0.url ?? null %}
+{% set secondary_text = paragraph.field_secondary_button_text.value ?? '' %}
+
 {%
   set classes = [
     'paragraph',
@@ -20,11 +25,34 @@
   <div class="content-item__layout">
     <div class="content-item__content">
       {% if title %}
-        <h2 class="content-item__title mb-4">{{ title }}</h2>
+        <h2 class="content-item__title mb-3">{{ title }}</h2>
       {% endif %}
 
       {% if content.field_body %}
         <div class="content-item__description">{{ content.field_body }}</div>
+      {% endif %}
+
+      {% if primary_url and primary_text %}
+        {% set primary_button = true %}
+      {% endif %}
+      {% if secondary_url and secondary_text %}
+        {% set secondary_button = true %}
+      {% endif %}
+
+      {% if primary_button or secondary_button %}
+        <div class="content-item__actions d-flex flex-wrap align-items-center gap-3">
+          {% if primary_button %}
+            <a href="{{ primary_url }}" class="content-item__primary-btn btn btn-primary btn-lg px-4 rounded-pill">
+              {{ primary_text }}
+            </a>
+          {% endif %}
+
+          {% if secondary_button %}
+            <a href="{{ secondary_url }}" class="content-item__secondary-btn btn btn-secondary btn-lg px-4 rounded-pill">
+              {{ secondary_text }}
+            </a>
+          {% endif %}
+        </div>
       {% endif %}
     </div>
 

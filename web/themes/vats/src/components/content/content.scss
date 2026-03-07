@@ -31,6 +31,10 @@
     }
   }
 
+  &__actions {
+    margin-top: 1.5rem;
+  }
+
   &__media {
     img,
     picture,
@@ -82,6 +86,20 @@
       .content-item__media {
         order: initial;
       }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content-item {
+    &__actions {
+      width: 100%;
+    }
+
+    &__primary-btn,
+    &__secondary-btn {
+      flex: 0 0 calc(50% - 0.75rem);
+      text-align: center;
     }
   }
 }
