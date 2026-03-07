@@ -12,11 +12,11 @@ selection_criteria:
   63440fd7-fd6a-492c-8e84-216ea1b6a165:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 63440fd7-fd6a-492c-8e84-216ea1b6a165
     context_mapping:
       node: node
     bundles:
       article: article
+    uuid: 63440fd7-fd6a-492c-8e84-216ea1b6a165
 selection_logic: and
 weight: -5
 relationships: {  }

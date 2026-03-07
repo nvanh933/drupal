@@ -1,0 +1,11 @@
+uuid: 583a693c-cc8b-4d84-b436-402b61d6ea99
+langcode: vi
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.listing_grid_section
+id: paragraph.listing_grid_section
+target_entity_type_id: paragraph
+target_bundle: listing_grid_section
+default_langcode: site_default
+language_alterable: false
