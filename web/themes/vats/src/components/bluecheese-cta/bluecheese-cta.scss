@@ -1,0 +1,90 @@
+@use '../../common/styles/typography.scss' as typography;
+
+.bluecheese-cta-section {
+  background-color: #f0f2f5;
+
+  &__heading {
+    @include typography.heading(3.1rem, 700);
+    color: #1c2f63;
+    max-width: 30rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: #ff6a5e;
+    border: 2px solid #1c2f63;
+    border-radius: 50%;
+    color: #1c2f63;
+    display: inline-flex;
+    flex: 0 0 1.7rem;
+    font-size: 0.95rem;
+    height: 1.7rem;
+    justify-content: center;
+    line-height: 1;
+    margin-top: 0.22rem;
+    width: 1.7rem;
+  }
+
+  &__text {
+    color: #243a6e;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .bluecheese-cta-section {
+    &__heading {
+      font-size: 2.6rem;
+      max-width: 100%;
+    }
+
+    &__text {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bluecheese-cta-section {
+    &__text {
+      font-size: 1.55rem;
+    }
+
+    &__list {
+      gap: 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bluecheese-cta-section {
+    &__heading {
+      font-size: 2rem;
+    }
+
+    &__icon {
+      flex-basis: 1.4rem;
+      font-size: 0.82rem;
+      height: 1.4rem;
+      margin-top: 0.2rem;
+      width: 1.4rem;
+    }
+
+    &__text {
+      font-size: 1.3rem;
+      line-height: 1.45;
+    }
+  }
+}

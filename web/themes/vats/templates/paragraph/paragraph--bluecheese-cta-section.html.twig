@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override for Bluecheese CTA Section paragraph.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--bluecheese-cta-section',
+    'bluecheese-cta-section',
+    'py-5',
+  ]
+%}
+
+{% set heading = paragraph.field_heading.value ?? '' %}
+
+<section{{ attributes.addClass(classes) }}>
+  <div class="container container-xl">
+    <div class="row g-4 g-lg-5 align-items-start">
+      <div class="col-12 col-lg-6">
+        {% if heading %}
+          <h2 class="bluecheese-cta-section__heading mb-0">{{ heading }}</h2>
+        {% endif %}
+      </div>
+
+      <div class="col-12 col-lg-6">
+        {% if paragraph.field_cta_item|length > 0 %}
+          <ul class="bluecheese-cta-section__list list-unstyled mb-0">
+            {% for item in paragraph.field_cta_item %}
+              {% set cta_item = item.value|trim %}
+              {% if cta_item %}
+                <li class="bluecheese-cta-section__item d-flex align-items-start gap-3">
+                  <span class="bluecheese-cta-section__icon" aria-hidden="true">
+                    <i class="bi bi-check"></i>
+                  </span>
+                  <span class="bluecheese-cta-section__text">{{ cta_item }}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
