@@ -1,21 +1,19 @@
 <div class="vats-user-login-page container-fluid p-0">
-  <div class="row g-0 vats-user-login-page__layout min-vh-100">
-    <div class="col-lg-7 d-none d-lg-block vats-user-login-page__visual position-relative">
+  <div class="vats-user-login-page__layout row g-0 min-vh-100">
+    <div class="vats-user-login-page__visual col-lg-7 d-none d-lg-block position-relative">
       <img
         src="{{ base_path ~ directory }}/images/login/background.jpg"
         alt="{{ site_name }}"
         class="vats-user-login-page__bg-image"
       />
-      <div class="vats-user-login-page__overlay position-absolute top-0 start-0 w-100 h-100"></div>
-
-      <div class="vats-user-login-page__visual-content position-absolute bottom-0 start-0 text-white">
+      <div class="vats-user-login-page__visual-content position-absolute bottom-0 start-0 end-0 text-white">
         <h1 class="display-6 fw-semibold mb-3">{{ site_name }}</h1>
         <p class="mb-0 fs-5">{{ site_slogan }}</p>
       </div>
     </div>
 
-    <div class="col-12 col-lg-5 d-flex align-items-center justify-content-center vats-user-login-page__panel p-4 p-md-5">
-      <div class="card border-0 shadow-sm w-100 vats-user-login-page__card">
+    <div class="vats-user-login-page__panel col-12 col-lg-5 d-flex align-items-center justify-content-center p-4 p-md-5">
+      <div class="vats-user-login-page__card card border-0 shadow-sm w-100">
         <div class="card-body p-4 p-md-5">
           <div class="vats-user-login-page__top-actions mb-3">
             <a href="{{ front_page }}" class="btn btn-link text-decoration-none px-0">
@@ -23,7 +21,7 @@
             </a>
           </div>
 
-          <div class="text-center mb-4 vats-user-login-page__header">
+          <div class="vats-user-login-page__header text-center mb-4">
             <a href="{{ front_page }}" class="d-inline-flex align-items-center justify-content-center mb-3" title="{{ 'Trang chủ'|t }}">
               <img src="{{ base_path ~ directory }}/images/logo.svg" alt="{{ site_name }}" class="vats-user-login-page__logo" />
             </a>
