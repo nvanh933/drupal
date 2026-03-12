@@ -1,0 +1,25 @@
+global:
+  css:
+    theme:
+      dist/css/vendor.css: {}
+      dist/css/main.css: {}
+      dist/css/components.css: {}
+  js:
+    dist/js/vendor.js: {}
+    dist/js/components.js: {}
+  dependencies:
+    - core/jquery
+
+user-login:
+  css:
+    theme:
+      dist/css/user-login.css: {}
+  dependencies:
+    - vats/global
+
+user-password:
+  css:
+    theme:
+      dist/css/user-password.css: {}
+  dependencies:
+    - vats/global

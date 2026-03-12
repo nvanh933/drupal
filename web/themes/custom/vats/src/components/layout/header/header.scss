@@ -1,0 +1,19 @@
+#header {
+  // position: sticky;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: 100;
+  background-color: #ffffff;
+
+  #site-logo img {
+    width: auto;
+    max-height: 2.625rem;
+  }
+
+  .header-region {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

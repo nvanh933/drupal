@@ -1,0 +1,34 @@
+.cta-section {
+  background-color: #12285f;
+
+  &__heading {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__subheading {
+
+  }
+
+  &__btn {
+    min-width: 10rem;
+  }
+
+  &__btn:hover,
+  &__btn:focus-visible {
+
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cta-section {
+    &__actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}
