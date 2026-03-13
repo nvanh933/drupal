@@ -1,5 +1,8 @@
+@use '../../../common/_typography' as typo;
+
 .features-section {
   &__heading {
+    @include typo.heading-style;
     margin-left: auto;
     margin-right: auto;
   }
@@ -37,11 +40,11 @@
   }
 
   &__title {
-
+    @include typo.title-style;
   }
 
   &__description {
-
+    @include typo.description-style;
   }
 }
 

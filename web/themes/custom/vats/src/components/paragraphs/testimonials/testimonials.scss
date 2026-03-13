@@ -1,6 +1,8 @@
+@use '../../../common/_typography' as typo;
+
 .testimonials-section {
   &__heading {
-
+    @include typo.heading-style;
   }
 
   &__slider {
@@ -45,14 +47,11 @@
   }
 
   &__title {
-
+    @include typo.title-style;
   }
 
   &__description {
-    font-style: italic;
-    line-height: 1.65;
-    margin-left: auto;
-    margin-right: auto;
+    @include typo.description-style;
   }
 }
 

@@ -1,6 +1,8 @@
+@use '../../../common/_typography' as typo;
+
 .listing-grid-section {
   &__heading {
-
+    @include typo.heading-style;
   }
 
   &__grid {
@@ -14,11 +16,11 @@
   height: 100%;
 
   &__title {
-
+    @include typo.title-style;
   }
 
   &__description {
-
+    @include typo.description-style;
   }
 }
 
@@ -40,10 +42,6 @@
 
 @media (max-width: 575.98px) {
   .listing-grid-section {
-    &__heading {
-      margin-bottom: 2rem !important;
-    }
-
     &__grid {
       grid-template-columns: minmax(0, 1fr);
       gap: 1.5rem;

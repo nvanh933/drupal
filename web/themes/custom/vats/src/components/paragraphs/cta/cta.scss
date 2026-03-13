@@ -1,22 +1,20 @@
+@use '../../../common/_typography' as typo;
+
 .cta-section {
   background-color: #12285f;
 
   &__heading {
+    @include typo.heading-style;
     margin-left: auto;
     margin-right: auto;
   }
 
   &__subheading {
-
+    @include typo.subheading-style;
   }
 
   &__btn {
     min-width: 10rem;
-  }
-
-  &__btn:hover,
-  &__btn:focus-visible {
-
   }
 }
 
