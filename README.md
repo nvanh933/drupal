@@ -1,145 +1,157 @@
 # Drupal Project
 
 ## Project Overview
-- **CMS:** Drupal 11 (`drupal/core-recommended ^11.3`)
-- **PHP:** 8.4+
-- **Database:** MySQL 8+ or MariaDB 10.11+
+- CMS: Drupal 11 (`drupal/core-recommended ^11.3`)
+- PHP: 8.4+
+- Database: MySQL 8+ or MariaDB 10.11+
 
 ## Repository Structure
-- `web/` — Drupal docroot (Apache must point here)
-- `config/sync/` — exported Drupal configuration
-- `web/themes/vats/` — custom theme (Twig, SCSS, Vite build pipeline, hook logic)
-- `web/modules/custom/` — custom modules (if needed in future)
-- `vendor/` — Composer dependencies
+- `web/`: Drupal docroot (web server should point here)
+- `config/sync/`: Exported Drupal configuration
+- `web/themes/custom/vats/`: Custom theme (Twig, Sass, Vite build pipeline, hooks)
+- `web/modules/custom/`: Custom modules
+- `vendor/`: Composer dependencies
 
-## LAMP Setup
-### 1) Requirements
-- Apache 2.4+
+## Requirements
 - PHP 8.4+ with common Drupal extensions (`pdo_mysql`, `gd`, `mbstring`, `xml`, `curl`, `zip`, `intl`, `opcache`)
-- MySQL/MariaDB server
+- MySQL/MariaDB
 - Composer 2
-- Node.js + npm
+- Node.js and npm
+- Drush (local binary or global install)
 
-### 2) Install dependencies
-- `composer install`
-- `cd web/themes/vats && npm install`
+## Setup
+1. Install PHP dependencies:
+   - `composer install`
+2. Install theme frontend dependencies:
+   - `cd web/themes/custom/vats && npm install`
+3. Configure database credentials in `web/sites/default/settings.php`.
+4. Run Drupal install/import flow via browser or Drush.
 
-### 3) Database
-Create a database and user (example):
-- `CREATE DATABASE drupal CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`
-- `CREATE USER 'drupal'@'localhost' IDENTIFIED BY 'your_password';`
-- `GRANT ALL PRIVILEGES ON drupal.* TO 'drupal'@'localhost';`
-- `FLUSH PRIVILEGES;`
+## Theme: web/themes/custom/vats
 
-### 4) Apache VirtualHost
-Set `DocumentRoot` to `.../drupal/web`.
-
-Example:
-```apache
-<VirtualHost *:80>
-	ServerName drupal.local
-	DocumentRoot /path/to/drupal/web
-
-	<Directory /path/to/drupal/web>
-		AllowOverride All
-		Require all granted
-	</Directory>
-</VirtualHost>
-```
-
-Enable `mod_rewrite` and restart Apache.
-
-### 5) Drupal settings
-- Ensure `web/sites/default/settings.php` exists.
-- Put DB credentials into `$databases` in `settings.php`.
-- Complete install/import flow in browser or with Drush.
-
-### 6) Build assets and clear cache
-- `cd web/themes/vats && npm run build`
-- `drush cr`
-
-## Theme
-
-### Root files
+### Root Files
 | File | Purpose |
 |---|---|
-| `vats.info.yml` | Theme metadata, regions, globally attached libraries |
-| `vats.libraries.yml` | Library definitions (`vendor`, `common`, `components`, route-specific) |
-| `vats.theme` | Preprocess hooks, template suggestions, form/attachment alters |
-| `vite.config.mjs` | Vite build configuration |
-| `package.json` | npm dependencies and build scripts |
+| `vats.info.yml` | Theme metadata, regions, attached libraries |
+| `vats.libraries.yml` | Library definitions (`vendor`, `main`, `components`, route-specific) |
+| `vats.theme` | Preprocess hooks, template suggestions, form alters |
+| `vite.config.mjs` | Vite build entries/output settings |
+| `package.json` | npm scripts and frontend dependencies |
 
-### Source
+### Source Structure
 ```
 src/
-├── vendor/                     # Third-party CSS/JS bundle entry
-│   └── vendor.js               #   → Bootstrap, Bootstrap Icons, Swiper
-├── common/                     # Global site styles + JS
-│   ├── common.js               #   → imports styles/ + components/
-│   └── styles/
-│       ├── header.scss
-│       └── footer.scss
-├── components/                 # Reusable component styles + JS
-│   ├── index.js                #   → barrel import for all components
-│   ├── hero/
-│   │   └── hero.scss
-│   └── features/
-│       └── features.scss
-└── pages/                      # Route-specific SCSS (standalone, no common)
-    ├── user-login/
-    │   └── style.scss
-    └── user-password/
-        └── style.scss
+├── common/
+│   ├── _helpers.scss
+│   ├── _typography.scss
+│   ├── _variables.scss
+│   └── main.scss
+├── components/
+│   ├── index.js
+│   ├── layout/
+│   │   ├── footer/
+│   │   └── header/
+│   ├── paragraphs/
+│   │   ├── bluecheese-cta/
+│   │   ├── content/
+│   │   ├── cta/
+│   │   ├── features/
+│   │   ├── hero/
+│   │   ├── listing-grid/
+│   │   └── testimonials/
+│   └── ui/
+│       └── button.scss
+├── pages/
+│   ├── user-login/
+│   │   └── user-login.scss
+│   └── user-password/
+│       └── user-password.scss
+└── vendor/
+	├── fonts.scss
+	└── vendor.js
 ```
 
-### Build output (`dist/`)
-Built by Vite. Empty JS entry chunks are auto-removed.
+### Vite Build Entries
+Configured in `vite.config.mjs`:
 
-| Entry | CSS output | JS output |
+| Entry | Source | Output |
 |---|---|---|
-| `src/vendor/vendor.js` | `dist/css/vendor.css` | `dist/js/vendor.js` |
-| `src/common/common.js` | `dist/css/common.css` | `dist/js/common.js` |
-| `src/components/index.js` | `dist/css/components.css` | `dist/js/components.js` (if non-empty) |
+| `vendor` | `src/vendor/vendor.js` | `dist/js/vendor.js`, `dist/css/vendor.css` |
+| `main` | `src/common/main.scss` | `dist/css/main.css` |
+| `components` | `src/components/index.js` | `dist/js/components.js`, `dist/css/components.css` |
+| `user-login` | `src/pages/user-login/user-login.scss` | `dist/css/user-login.css` |
+| `user-password` | `src/pages/user-password/user-password.scss` | `dist/css/user-password.css` |
 
-### Templates (`templates/`)
+### Templates
 ```
 templates/
-├── layout/
-│   ├── html.html.twig
-│   ├── page.html.twig                              # Base page layout (defines {% block body %})
-│   ├── region.html.twig
-│   └── maintenance-page.html.twig
-├── page/
-│   ├── page--user--login.html.twig                 # Standalone login layout
-│   ├── page--user--password.html.twig              # Standalone reset-password layout
-│   └── page--node--landing-page.html.twig          # Landing page (extends page, overrides body)
 ├── block/
 │   ├── block.html.twig
-├── paragraph       # reusable content components
-├── content/        # node.html.twig, page-title, taxonomy-term
-├── form/           # form element overrides (input, select, textarea, etc.)
-├── field/          # field.html.twig
-├── navigation/     # menu, breadcrumb, pager, links
-├── views/          # views-view, views-exposed-form, etc.
-├── misc/           # status-messages
-└── user/           # user.html.twig
+│   └── block--system-main-block--node--landing-page.html.twig
+├── content/
+│   ├── media--image.html.twig
+│   ├── node.html.twig
+│   ├── node--landing-page.html.twig
+│   ├── page-title.html.twig
+│   └── taxonomy-term.html.twig
+├── field/
+├── form/
+├── layout/
+│   ├── html.html.twig
+│   ├── maintenance-page.html.twig
+│   ├── page.html.twig
+│   ├── region.html.twig
+│   └── region--node--landing-page--content.html.twig
+├── misc/
+│   └── status-messages.html.twig
+├── navigation/
+├── page/
+│   ├── page--node--landing-page.html.twig
+│   ├── page--user--login.html.twig
+│   └── page--user--password.html.twig
+├── paragraph/
+│   ├── paragraph--bluecheese-cta-section.html.twig
+│   ├── paragraph--content-item.html.twig
+│   ├── paragraph--content-section.html.twig
+│   ├── paragraph--cta-section.html.twig
+│   ├── paragraph--feature-item.html.twig
+│   ├── paragraph--features-section.html.twig
+│   ├── paragraph--hero-section.html.twig
+│   ├── paragraph--listing-grid-item.html.twig
+│   ├── paragraph--listing-grid-section.html.twig
+│   ├── paragraph--testimonial-item.html.twig
+│   └── paragraph--testimonials-section.html.twig
+├── user/
+│   └── user.html.twig
+└── views/
+	├── views-exposed-form.html.twig
+	├── views-view-grid.html.twig
+	├── views-view-list.html.twig
+	├── views-view-table.html.twig
+	├── views-view-unformatted.html.twig
+	└── views-view.html.twig
 ```
 
-### Template suggestion hooks (in `vats.theme`)
-| Hook | Suggestion pattern | Example file |
+### Theme Suggestion Hooks
+Defined in `vats.theme`:
+
+| Hook | Suggestion pattern | Example |
 |---|---|---|
-| `page_alter` | `page__node__{bundle}` | `page--node--landing-page.html.twig` |
-| `region_alter` | `region__node__{bundle}__content` | `region--node--landing-page--content.html.twig` |
-| `block_alter` | `block__system_main_block__node__{bundle}` | `block--system-main-block--node--landing-page.html.twig` |
+| `hook_theme_suggestions_page_alter()` | `page__node__{bundle}` | `page--node--landing-page.html.twig` |
+| `hook_theme_suggestions_region_alter()` | `region__node__{bundle}__content` | `region--node--landing-page--content.html.twig` |
+| `hook_theme_suggestions_block_alter()` | `block__system_main_block__node__{bundle}` | `block--system-main-block--node--landing-page.html.twig` |
 
 ## Useful Commands
-- `composer install`
-- `composer validate --no-check-publish`
-- `composer audit --locked`
-- `cd web/themes/vats && npm run build`
-- `drush cr`
+- Install backend dependencies: `composer install`
+- Validate composer config: `composer validate --no-check-publish`
+- Audit locked dependencies: `composer audit --locked`
+- Install theme dependencies: `cd web/themes/custom/vats && npm install`
+- Build theme assets: `cd web/themes/custom/vats && npm run build`
+- Run dev server for theme: `cd web/themes/custom/vats && npm run dev`
+- Clear Drupal cache: `drush cr`
 
 ## Contributor Notes
-- Keep changes minimal and reversible
-- Work primarily in `web/themes/vats` & `web/modules/custom` unless config updates are intended
-- Do not edit `vendor/**`, `web/core/**`, or contrib code unless explicitly required
+- Keep changes minimal and scoped.
+- Work primarily in `web/themes/custom/vats` and `web/modules/custom` unless config updates are intended.
+- Do not edit `vendor/`, `web/core/`, or contrib code directly unless explicitly required.
+- Do not commit build artifacts from `web/themes/custom/vats/dist/`.
