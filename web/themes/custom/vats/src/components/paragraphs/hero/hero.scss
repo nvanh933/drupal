@@ -1,6 +1,4 @@
 .hero-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -27,13 +25,6 @@
 
   &__secondary-btn {
     min-width: 9rem;
-    color: #12285f;
-    text-decoration: none;
-
-    &:hover {
-      color: #12285f;
-      text-decoration: underline;
-    }
   }
 
   &__media {
@@ -48,8 +39,6 @@
 
 @media (max-width: 991.98px) {
   .hero-section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     min-height: auto;
     display: block;
   }

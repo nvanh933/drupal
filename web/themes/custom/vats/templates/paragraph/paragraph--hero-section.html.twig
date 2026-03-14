@@ -9,6 +9,7 @@
     'paragraph',
     'paragraph--type--hero-section',
     'hero-section',
+    'py-5',
   ]
 %}
 
@@ -21,7 +22,7 @@
 
 <section{{ attributes.addClass(classes) }}>
   <div class="container container-xl">
-    <div class="row align-items-center">
+    <div class="row align-items-lg-center">
       <div class="col-12 col-lg-6">
         <div class="hero-section__content">
           {% if heading %}
@@ -34,13 +35,15 @@
 
           <div class="hero-section__actions d-flex flex-wrap align-items-center gap-3 mt-4">
             {% if primary_url and primary_text %}
-              <a href="{{ primary_url }}" class="hero-section__primary-btn btn btn-primary btn-lg px-4 rounded-pill">
+              <a href="{{ primary_url }}" class="hero-section__primary-btn btn btn-primary btn-lg py-3 px-4 rounded-pill">
+                <i class="bi bi-envelope-fill"></i>
                 {{ primary_text }}
               </a>
             {% endif %}
 
             {% if secondary_url and secondary_text %}
-              <a href="{{ secondary_url }}" class="hero-section__secondary-btn btn btn-link btn-lg px-4">
+              <a href="{{ secondary_url }}" class="hero-section__secondary-btn btn btn-secondary btn-lg px-4 py-3 rounded-pill">
+                <i class="bi bi-arrow-down-circle-fill"></i>
                 {{ secondary_text }}
               </a>
             {% endif %}
@@ -48,7 +51,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-lg-6 text-center">
+      <div class="col-12 col-lg-6 text-center mt-5 mt-lg-0">
         <div class="hero-section__media">
           {{ content.field_image }}
         </div>
