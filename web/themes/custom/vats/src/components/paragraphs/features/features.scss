@@ -3,16 +3,13 @@
 .features-section {
   &__heading {
     @include typo.heading-style;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  &__subheading {
+    @include typo.subheading-style;
   }
 
   &__grid {
-    .field--name-field-features,
-    .field {
-      margin: 0;
-    }
-
     .field--name-field-features {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
