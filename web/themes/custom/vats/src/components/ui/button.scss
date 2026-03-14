@@ -1,16 +1,12 @@
 .btn {
   position: relative;
-  padding: 1rem;
   overflow: hidden;
   z-index: 1;
   cursor: pointer;
-  border-radius: 0;
-  border: none;
   font-weight: 700;
   font-size: 0.75rem;
   line-height: 1rem;
-  text-align: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   transition-property: color;
   transition-duration: 0.5s;
@@ -40,8 +36,6 @@
     transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
   }
 
-  &.primary,
-  &.btn--primary,
   &-primary {
     background-color: #12285f;
     color: #ffffff;
@@ -64,8 +58,6 @@
     }
   }
 
-  &.secondary,
-  &.btn--secondary,
   &-secondary {
     background-color: #ffffff;
     color: #12285f;

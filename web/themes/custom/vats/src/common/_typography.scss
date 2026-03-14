@@ -1,9 +1,5 @@
-// Breakpoint chuẩn mobile (theo pattern đang dùng trong project)
-$bp-mobile: 575.98px;
-
-// Helper để không lặp @media
 @mixin mobile-down {
-  @media (max-width: $bp-mobile) {
+  @media (max-width: 575.98px) {
     @content;
   }
 }
@@ -15,11 +11,6 @@ body {
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.6;
-
-  @include mobile-down {
-    font-size: 15px;
-    line-height: 1.55;
-  }
 }
 
 @mixin heading-style {
