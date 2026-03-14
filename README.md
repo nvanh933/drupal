@@ -147,7 +147,6 @@ Defined in `vats.theme`:
 - Audit locked dependencies: `composer audit --locked`
 - Install theme dependencies: `cd web/themes/custom/vats && npm install`
 - Build theme assets: `cd web/themes/custom/vats && npm run build`
-- Run dev server for theme: `cd web/themes/custom/vats && npm run dev`
 - Clear Drupal cache: `drush cr`
 
 ## Contributor Notes
