@@ -19,6 +19,7 @@
 {% set secondary_text = paragraph.field_secondary_button_text.value ?? '' %}
 {% set heading = paragraph.field_heading.value ?? '' %}
 {% set subheading = paragraph.field_subheading.value ?? '' %}
+{% set primary_button, secondary_button = false, false %}
 
 <section{{ attributes.addClass(classes) }}>
   <div class="container container-xl">
@@ -33,15 +34,23 @@
             <p class="hero-section__subheading mb-2">{{ subheading }}</p>
           {% endif %}
 
+          {% if primary_url and primary_text %}
+            {% set primary_button = true %}
+          {% endif %}
+
+          {% if secondary_url and secondary_text %}
+            {% set secondary_button = true %}
+          {% endif %}
+
           <div class="hero-section__actions d-flex flex-wrap align-items-center gap-3 mt-4">
-            {% if primary_url and primary_text %}
+            {% if primary_button %}
               <a href="{{ primary_url }}" class="hero-section__primary-btn btn btn-primary btn-lg py-3 px-4 rounded-pill">
                 <i class="bi bi-envelope-fill"></i>
                 {{ primary_text }}
               </a>
             {% endif %}
 
-            {% if secondary_url and secondary_text %}
+            {% if secondary_button %}
               <a href="{{ secondary_url }}" class="hero-section__secondary-btn btn btn-secondary btn-lg px-4 py-3 rounded-pill">
                 <i class="bi bi-question-circle-fill"></i>
                 {{ secondary_text }}

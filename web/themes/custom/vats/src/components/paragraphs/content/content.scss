@@ -1,9 +1,6 @@
 @use '../../../common/_typography' as typo;
 
 .content-item {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-
   & + & {
     margin-top: 4rem;
   }
@@ -29,10 +26,6 @@
     p:last-child {
       margin-bottom: 0;
     }
-  }
-
-  &__actions {
-    margin-top: 1.5rem;
   }
 
   &__media {

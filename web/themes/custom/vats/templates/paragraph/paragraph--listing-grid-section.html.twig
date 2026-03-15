@@ -18,10 +18,10 @@
 <section{{ attributes.addClass(classes) }}>
   <div class="container container-xl">
     {% if heading %}
-      <h2 class="listing-grid-section__heading mb-5">{{ heading }}</h2>
+      <h2 class="listing-grid-section__heading text-center mb-3">{{ heading }}</h2>
     {% endif %}
 
-    <div class="listing-grid-section__grid">
+    <div class="listing-grid-section__grid mt-5">
       {{ content.field_listing_item }}
     </div>
   </div>

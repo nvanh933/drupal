@@ -18,10 +18,10 @@
 <section{{ attributes.addClass(classes) }}>
   <div class="container container-xl">
     {% if heading %}
-      <h2 class="testimonials-section__heading text-center mb-5">{{ heading }}</h2>
+      <h2 class="testimonials-section__heading text-center mb-3">{{ heading }}</h2>
     {% endif %}
 
-    <div class="testimonials-section__slider swiper js-testimonials-swiper">
+    <div class="testimonials-section__slider swiper js-testimonials-swiper mt-5">
       <div class="swiper-wrapper">
         {{ content.field_testimonials }}
       </div>

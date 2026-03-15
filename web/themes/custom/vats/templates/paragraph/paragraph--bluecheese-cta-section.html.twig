@@ -17,10 +17,10 @@
 
 <section{{ attributes.addClass(classes) }}>
   <div class="container container-xl">
-    <div class="row g-4 g-lg-5 align-items-start">
+    <div class="row align-items-start">
       <div class="col-12 col-lg-6">
         {% if heading %}
-          <h2 class="bluecheese-cta-section__heading mb-0">{{ heading }}</h2>
+          <h2 class="bluecheese-cta-section__heading mb-3">{{ heading }}</h2>
         {% endif %}
       </div>
 
@@ -34,7 +34,7 @@
                   <span class="bluecheese-cta-section__icon" aria-hidden="true">
                     <i class="bi bi-check"></i>
                   </span>
-                  <span class="bluecheese-cta-section__text">{{ cta_item }}</span>
+                  <span class="bluecheese-cta-section__description">{{ cta_item }}</span>
                 </li>
               {% endif %}
             {% endfor %}

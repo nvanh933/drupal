@@ -20,9 +20,9 @@
   &__icon {
     align-items: center;
     background-color: #ff6a5e;
-    border: 2px solid #1c2f63;
+    border: 2px solid #12285f;
     border-radius: 50%;
-    color: #1c2f63;
+    color: #12285f;
     display: inline-flex;
     flex: 0 0 1.7rem;
     font-size: 0.95rem;
@@ -33,8 +33,8 @@
     width: 1.7rem;
   }
 
-  &__text {
-    @include typo.title-style;
+  &__description {
+    @include typo.description-style;
   }
 }
 

@@ -19,13 +19,13 @@
 <article{{ attributes.addClass(classes) }}>
   <div class="testimonial-item__inner text-center">
     {% if content.field_image %}
-      <div class="testimonial-item__media mb-4">
+      <div class="testimonial-item__media mb-3">
         {{ content.field_image }}
       </div>
     {% endif %}
 
     {% if title %}
-      <h3 class="testimonial-item__title mb-1">{{ title }}</h3>
+      <h3 class="testimonial-item__title mb-3">{{ title }}</h3>
     {% endif %}
 
     {% if description %}
