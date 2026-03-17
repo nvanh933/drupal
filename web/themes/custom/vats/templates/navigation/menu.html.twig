@@ -30,22 +30,21 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass(['menu', 'vats-main-menu', 'nav', 'align-items-lg-center', 'gap-lg-2']) }}>
+      <ul{{ attributes.addClass('menu') }}>
     {% else %}
-      <ul class="menu vats-sub-menu list-unstyled mb-0">
+      <ul class="menu">
     {% endif %}
     {% for item in items %}
       {%
         set classes = [
           'menu-item',
-          menu_level == 0 ? 'nav-item',
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
-        {{ link(item.title, item.url, {'class': [menu_level == 0 ? 'nav-link', menu_level > 0 ? 'dropdown-item', item.in_active_trail ? 'active']}) }}
+        {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}

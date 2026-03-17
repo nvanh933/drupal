@@ -7,15 +7,9 @@ core_version_requirement: ^11
 libraries:
   - vats/global
 regions:
-  top_page: 'Page top'
   header: 'Header'
-  mobile_page: 'Mobile navigation'
-  highlighted: 'Highlighted'
-  breadcrumb: 'Breadcrumb'
   content: 'Content'
   sidebar_first: 'First sidebar'
   sidebar_second: 'Second sidebar'
   bottom_page: 'Page bottom'
-  footer_first: 'First footer'
-  footer_second: 'Second footer'
-  footer_third: 'Third footer'
+  footer: 'Footer'

@@ -23,10 +23,10 @@
     <h3>{{ title }}</h3>
   {% endif %}
 
-  <{{ list.type }}{{ list.attributes.addClass(['list-group', 'list-group-flush']) }}>
+  <{{ list.type }}{{ list.attributes }}>
 
     {% for row in rows %}
-      <li{{ row.attributes.addClass('list-group-item') }}>
+      <li{{ row.attributes }}>
         {{- row.content -}}
       </li>
     {% endfor %}

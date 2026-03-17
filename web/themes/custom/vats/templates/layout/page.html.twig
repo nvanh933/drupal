@@ -42,106 +42,71 @@
  * @see html.html.twig
  */
 #}
-<div id="wrapper" class="min-vh-100 d-flex flex-column">
-  {% if page.top_page %}
-    <div id="page-top" class="clearfix">
-      <div class="container">
-        {{ page.top_page }}
-      </div>
-    </div>
-  {% endif %}
-
-  <header id="header" class="border-bottom bg-white">
-    <div class="container container-xl d-flex align-items-center justify-content-between py-3">
-      <div id="site-logo" class="logo d-flex align-items-center">
+<div id="wrapper" class="clearfix">
+  <header id="header" class="clearfix py-3">
+    <div class="container container-xl">
+      <div id="site-logo" class="logo">
         <a href="{{ front_page }}" title="{{ 'Trang chủ'|t }}">
           <img src="{{ base_path ~ directory }}/images/logo.svg" alt="{{ site_name }}" />
         </a>
       </div>
-      {% if page.header or page.primary_menu %}
-        <div class="header-region ms-auto">
+      {% if page.header %}
+        <div class="header-region">
           {{ page.header }}
-          {{ page.primary_menu }}
         </div>
       {% endif %}
-      <div id="mobile-nav-toogle">
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      </div>
     </div>
   </header>
 
   {% block body %}
-    {% if page.highlighted %}
-      <div id="highlighted" class="mb-3">
-        <div class="container">
-          {{ page.highlighted }}
-        </div>
-      </div>
-    {% endif %}
-
-    {% if page.breadcrumb %}
-      <div id="breadcrumb" class="mb-3">
-        <div class="container">
-          {{ page.breadcrumb }}
-        </div>
-      </div>
-    {% endif %}
-
-    <div id="main" class="flex-grow-1 py-4">
-      <div class="container">
-        <div class="row g-4">
-            {% if page.sidebar_first %}
-              <div class="col-12 col-lg-3">
-                <div class="sidebar-first clearfix">
-                  {{ page.sidebar_first }}
-                </div>
+    <div id="main" class="clearfix py-5">
+      <div class="container container-xl">
+        <div class="row">
+          {% if page.sidebar_first %}
+            <div class="col-12 col-lg-3">
+              <div class="sidebar-first clearfix">
+                {{ page.sidebar_first }}
               </div>
-            {% endif %}
-
-            <div class="{% if page.sidebar_first and page.sidebar_second %}col-12 col-lg-6{% elseif page.sidebar_first or page.sidebar_second %}col-12 col-lg-9{% else %}col-12{% endif %}">
-              {{ page.content }}
             </div>
+          {% endif %}
 
-            {% if page.sidebar_second %}
-              <div class="col-12 col-lg-3">
-                <div class="sidebar-second clearfix">
-                  {{ page.sidebar_second }}
-                </div>
+          <div class="{% if page.sidebar_first and page.sidebar_second %}col-12 col-lg-6{% elseif page.sidebar_first or page.sidebar_second %}col-12 col-lg-9{% else %}col-12{% endif %}">
+            {{ page.content }}
+          </div>
+
+          {% if page.sidebar_second %}
+            <div class="col-12 col-lg-3">
+              <div class="sidebar-second clearfix">
+                {{ page.sidebar_second }}
               </div>
-            {% endif %}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
 
     {% if page.bottom_page %}
-      <div id="page-bottom" class="clearfix">
-        <div class="container">
+      <div id="page-bottom" class="clearfix py-5">
+        <div class="container container-xl">
           {{ page.bottom_page }}
         </div>
       </div>
     {% endif %}
   {% endblock %}
 
-  <div id="footer" class="mt-auto py-4 border-top">
-    <div class="container">
-      {% if page.footer_first %}
-        {{ page.footer_first }}
-      {% endif %}
-
-      {% if page.footer_second %}
-        {{ page.footer_second }}
-      {% endif %}
-
-      {% if page.footer_third %}
-        {{ page.footer_third }}
+  <div id="footer" class="clearfix py-5">
+    <div class="container container-xl">
+      {% if page.footer %}
+        {{ page.footer }}
       {% endif %}
     </div>
   </div>
 
-  <div id="copyright" class="py-3 text-center">
-    <div class="container">
-      &copy; {{ "now"|date("Y") }} VATS. All rights reserved.
+  <div id="copyright" class="clearfix py-3">
+    <div class="container container-xl">
+      <div class="text-center">
+        &copy; {{ "now"|date("Y") }} VATS. All rights reserved.
+      </div>
     </div>
   </div>
 </div>

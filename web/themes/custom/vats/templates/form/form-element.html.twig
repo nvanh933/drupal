@@ -48,8 +48,6 @@
   set classes = [
     'js-form-item',
     'form-item',
-    type in ['checkbox', 'radio'] ? 'form-check',
-    type not in ['checkbox', 'radio', 'hidden'] ? 'mb-3',
     'js-form-type-' ~ type|clean_class,
     'form-type-' ~ type|clean_class,
     'js-form-item-' ~ name|clean_class,
@@ -61,7 +59,7 @@
 %}
 {%
   set description_classes = [
-    'form-text',
+    'description',
     description_display == 'invisible' ? 'visually-hidden',
   ]
 %}
@@ -85,8 +83,8 @@
     {{ label }}
   {% endif %}
   {% if errors %}
-    <div class="invalid-feedback d-block">
-      {{ errors }}
+    <div class="form-item--error-message">
+      <strong>{{ errors }}</strong>
     </div>
   {% endif %}
   {% if description_display in ['after', 'invisible'] and description.content %}

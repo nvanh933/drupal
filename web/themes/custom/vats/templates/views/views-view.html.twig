@@ -33,7 +33,6 @@
 {%
   set classes = [
     'view',
-    'mb-4',
     'view-' ~ id|clean_class,
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
@@ -47,17 +46,17 @@
   {% endif %}
   {{ title_suffix }}
   {% if header %}
-    <div class="view-header mb-3">
+    <div class="view-header">
       {{ header }}
     </div>
   {% endif %}
   {% if exposed %}
-    <div class="view-filters card border-0 shadow-sm p-3 p-md-4 mb-4">
+    <div class="view-filters">
       {{ exposed }}
     </div>
   {% endif %}
   {% if attachment_before %}
-    <div class="attachment attachment-before mb-3">
+    <div class="attachment attachment-before">
       {{ attachment_before }}
     </div>
   {% endif %}
@@ -67,7 +66,7 @@
       {{ rows }}
     </div>
   {% elseif empty %}
-    <div class="view-empty alert alert-info">
+    <div class="view-empty">
       {{ empty }}
     </div>
   {% endif %}
@@ -76,7 +75,7 @@
     {{ pager }}
   {% endif %}
   {% if attachment_after %}
-    <div class="attachment attachment-after mt-3">
+    <div class="attachment attachment-after">
       {{ attachment_after }}
     </div>
   {% endif %}
@@ -84,7 +83,7 @@
     {{ more }}
   {% endif %}
   {% if footer %}
-    <div class="view-footer mt-3">
+    <div class="view-footer">
       {{ footer }}
     </div>
   {% endif %}

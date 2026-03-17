@@ -27,8 +27,6 @@
 {%
   set classes = [
     'views-view-grid',
-    'row',
-    'g-4',
     options.alignment,
     'cols-' ~ options.columns,
     'clearfix',
@@ -43,22 +41,9 @@
   %}
 {% endif %}
 {% if options.col_class_default %}
-  {% set bootstrap_col = 'col-lg-4' %}
-  {% if options.columns == 1 %}
-    {% set bootstrap_col = 'col-lg-12' %}
-  {% elseif options.columns == 2 %}
-    {% set bootstrap_col = 'col-lg-6' %}
-  {% elseif options.columns == 3 %}
-    {% set bootstrap_col = 'col-lg-4' %}
-  {% elseif options.columns == 4 %}
-    {% set bootstrap_col = 'col-lg-3' %}
-  {% endif %}
   {%
     set col_classes = [
       'views-col',
-      'col-12',
-      'col-md-6',
-      bootstrap_col,
       options.alignment == 'vertical' ? 'clearfix',
     ]
   %}
