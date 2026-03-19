@@ -8,6 +8,8 @@ libraries:
   - vats/global
 regions:
   header: 'Header'
+  highlighted: 'Highlighted'
+  breadcrumb: 'Breadcrumb'
   content: 'Content'
   sidebar_first: 'First sidebar'
   sidebar_second: 'Second sidebar'

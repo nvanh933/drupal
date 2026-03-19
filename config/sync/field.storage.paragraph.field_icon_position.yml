@@ -1,0 +1,27 @@
+uuid: 72a38659-204d-4351-b803-3ed94360ddcf
+langcode: vi
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon_position
+field_name: field_icon_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

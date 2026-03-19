@@ -1,22 +1,22 @@
-uuid: 7374af17-766c-45aa-8cea-d86bccc35b8a
+uuid: 5280f809-bd0b-4e44-9e18-3e4f0c6181c4
 langcode: vi
 status: true
 dependencies:
   config:
-    - field.field.paragraph.listing_grid_item.field_cta_link
-    - field.field.paragraph.listing_grid_item.field_description
-    - field.field.paragraph.listing_grid_item.field_image
-    - field.field.paragraph.listing_grid_item.field_title
-    - paragraphs.paragraphs_type.listing_grid_item
+    - field.field.paragraph.hero.field_buttons
+    - field.field.paragraph.hero.field_description
+    - field.field.paragraph.hero.field_heading
+    - field.field.paragraph.hero.field_image
+    - paragraphs.paragraphs_type.hero
   module:
     - media_library
     - paragraphs
-id: paragraph.listing_grid_item.default
+id: paragraph.hero.default
 targetEntityType: paragraph
-bundle: listing_grid_item
+bundle: hero
 mode: default
 content:
-  field_cta_link:
+  field_buttons:
     type: paragraphs
     weight: 3
     region: content
@@ -42,20 +42,20 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_image:
-    type: media_library_widget
-    weight: 0
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-  field_title:
+  field_heading:
     type: string_textfield
     weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
 hidden:
   created: true

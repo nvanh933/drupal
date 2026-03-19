@@ -43,6 +43,9 @@ function vats_preprocess_page(array &$vars): void {
   $vars['site_name'] = \Drupal::config('system.site')->get('name');
   $vars['site_slogan'] = \Drupal::config('system.site')->get('slogan');
 
+  $themeSettingsProvider = \Drupal::service('Drupal\Core\Extension\ThemeSettingsProvider');
+  $vars['site_logo'] = $themeSettingsProvider->getSetting('logo.url');
+
   $route_name = _vats_get_route_name();
 
   if ($route_name === 'user.login') {
@@ -140,7 +143,6 @@ function vats_form_user_pass_alter(array &$form, FormStateInterface $form_state,
  */
 function _vats_set_css_class(array &$form) {
   if (isset($form['actions']['submit']) && is_array($form['actions']['submit'])) {
-    $form['actions']['submit']['#attributes']['class'][] = 'btn';
-    $form['actions']['submit']['#attributes']['class'][] = 'btn-primary';
+    $form['actions']['submit']['#attributes']['class'][] = 'w-100';
   }
 }

@@ -1,16 +1,17 @@
-uuid: ebe10198-2336-4577-8124-698646637691
+uuid: 2234db85-0880-45a6-af66-e74cf3afdab2
 langcode: vi
 status: true
 dependencies:
   module:
-    - media
     - paragraphs
-id: paragraph.field_image
-field_name: field_image
+id: paragraph.field_icon
+field_name: field_icon
 entity_type: paragraph
-type: entity_reference
+type: string
 settings:
-  target_type: media
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

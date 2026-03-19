@@ -2,12 +2,27 @@
 /**
  * @file
  * Theme override for an 'input' #type form element.
- *
- * Available variables:
- * - attributes: A list of HTML attributes for the input element.
- * - children: Optional additional rendered elements.
- *
- * @see\Drupal\Core\Form\FormPreprocess::preprocessInput()
  */
 #}
-<input{{ attributes.addClass('form-control') }} />{{ children }}
+
+{% set input_type = attributes.type ? attributes.type.__toString|default('text') : 'text' %}
+
+{% set type_class_map = {
+  'checkbox': ['form-check-input'],
+  'radio': ['form-check-input'],
+  'submit': ['btn', 'btn-primary'],
+  'button': ['btn', 'btn-primary'],
+  'reset': ['btn', 'btn-primary'],
+  'file': ['form-control'],
+  'range': ['form-range'],
+  'color': ['form-control', 'form-control-color'],
+  'hidden': [],
+} %}
+
+{% set classes = type_class_map[input_type] ?? ['form-control'] %}
+
+{% if input_type in ['submit', 'button', 'reset'] %}
+  <button{{ attributes.addClass(classes) }}>{{ element['#value'] }}</button>
+{% else %}
+  <input{{ attributes.addClass(classes) }} />{{ children }}
+{% endif %}

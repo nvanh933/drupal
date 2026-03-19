@@ -1,19 +1,18 @@
-uuid: 813c7950-414f-42c0-a344-6ba7a312b4da
+uuid: a122ad5f-0f5f-478f-babc-c67491aea23f
 langcode: vi
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sections
-    - node.type.landing_page
-    - paragraphs.paragraphs_type.hero
-    - paragraphs.paragraphs_type.listing_grid
+    - field.storage.paragraph.field_cta_link
+    - paragraphs.paragraphs_type.link_component
+    - paragraphs.paragraphs_type.listing_grid_item
   module:
     - entity_reference_revisions
-id: node.landing_page.field_sections
-field_name: field_sections
-entity_type: node
-bundle: landing_page
-label: Sections
+id: paragraph.listing_grid_item.field_cta_link
+field_name: field_cta_link
+entity_type: paragraph
+bundle: listing_grid_item
+label: 'CTA link'
 description: ''
 required: false
 translatable: false
@@ -23,23 +22,22 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      hero: hero
-      listing_grid: listing_grid
+      link_component: link_component
     negate: 0
     target_bundles_drag_drop:
       button_component:
-        weight: 5
+        weight: 6
         enabled: false
       hero:
         weight: 7
-        enabled: true
-      link_component:
-        weight: 6
         enabled: false
-      listing_grid:
-        weight: 7
+      link_component:
+        weight: 8
         enabled: true
+      listing_grid:
+        weight: 9
+        enabled: false
       listing_grid_item:
-        weight: 17
+        weight: 10
         enabled: false
 field_type: entity_reference_revisions

@@ -1,20 +1,22 @@
-uuid: 14697ccc-4cf2-4f86-aad7-6f2fee67f85a
-langcode: vi
+uuid: bb2371b0-20cf-4db2-9829-0bc7d6ec6830
+langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
     - vats
+_core:
+  default_config_hash: WvPhI8OwllG0gE69-F8qL3ai3nd5SbYD6JpmEuZcyok
 id: vats_messages
 theme: vats
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
-  label: Messages
+  label: 'Status messages'
   label_display: '0'
   provider: system
 visibility: {  }

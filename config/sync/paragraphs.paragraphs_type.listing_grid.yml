@@ -1,9 +1,9 @@
-uuid: 07f1be6b-e237-4c30-ac59-c242abdd45d6
+uuid: 72a1339e-712b-468e-979d-ecd49a31eb62
 langcode: vi
 status: true
 dependencies: {  }
-id: listing_grid_item
-label: 'Listing Grid - Item'
+id: listing_grid
+label: 'Listing Grid'
 icon_uuid: null
 icon_default: null
 description: ''

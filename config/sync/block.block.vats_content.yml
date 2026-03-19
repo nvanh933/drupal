@@ -1,4 +1,4 @@
-uuid: c2fe9365-62ee-4aaa-95c3-e8ef7a260614
+uuid: 0fb35d9b-1a1c-42a4-974a-76aba81241c1
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - vats
 _core:
-  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+  default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
 id: vats_content
 theme: vats
 region: content
-weight: 1
+weight: 3
 provider: null
 plugin: system_main_block
 settings:

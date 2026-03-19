@@ -1,0 +1,21 @@
+uuid: a0e311f6-7ae6-4cb5-8d26-6ad138e4733a
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_position
+    - paragraphs.paragraphs_type.button_component
+  module:
+    - options
+id: paragraph.button_component.field_icon_position
+field_name: field_icon_position
+entity_type: paragraph
+bundle: button_component
+label: 'Icon position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,15 +1,17 @@
-uuid: 892c6937-c0c5-4268-94d1-6d85eafb0928
-langcode: vi
+uuid: cc42630f-64d1-4586-99a1-d7673922d02a
+langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
     - vats
+_core:
+  default_config_hash: HLQY2xgby8K3vN_98hiOSasOhm9pdCsH234-s0duJ8Q
 id: vats_page_title
 theme: vats
 region: content
-weight: 0
+weight: 2
 provider: null
 plugin: page_title_block
 settings:
@@ -21,4 +23,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>\r\n/user/login\r\n/user/password"
+    pages: "/user/login\r\n/user/password"

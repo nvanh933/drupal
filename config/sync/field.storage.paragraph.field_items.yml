@@ -1,19 +1,19 @@
-uuid: 35b6db02-6c1b-40cf-99af-1aa079d1e549
+uuid: 078b3f1a-f016-4092-a4e4-25571e23bd5d
 langcode: vi
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-id: paragraph.field_cta_link
-field_name: field_cta_link
+id: paragraph.field_items
+field_name: field_items
 entity_type: paragraph
 type: entity_reference_revisions
 settings:
   target_type: paragraph
 module: entity_reference_revisions
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -47,11 +47,11 @@
     <div class="container container-xl">
       <div id="site-logo" class="logo">
         <a href="{{ front_page }}" title="{{ 'Trang chủ'|t }}">
-          <img src="{{ base_path ~ directory }}/images/logo.svg" alt="{{ site_name }}" />
+          <img src="{{ site_logo }}" alt="{{ site_name }}" />
         </a>
       </div>
       {% if page.header %}
-        <div class="header-region">
+        <div class="header-region ms-auto">
           {{ page.header }}
         </div>
       {% endif %}
@@ -59,13 +59,14 @@
   </header>
 
   {% block body %}
-    <div id="main" class="clearfix py-5">
-      <div class="container container-xl">
-        <div class="row">
-          {% if page.sidebar_first %}
-            <div class="col-12 col-lg-3">
-              <div class="sidebar-first clearfix">
-                {{ page.sidebar_first }}
+    <div id="main" class="flex-grow-1 py-4">
+      <div class="container">
+        <div class="row g-4">
+            {% if page.sidebar_first %}
+              <div class="col-12 col-lg-3">
+                <div class="sidebar-first clearfix">
+                  {{ page.sidebar_first }}
+                </div>
               </div>
             </div>
           {% endif %}
@@ -94,11 +95,25 @@
     {% endif %}
   {% endblock %}
 
-  <div id="footer" class="clearfix py-5">
-    <div class="container container-xl">
-      {% if page.footer %}
-        {{ page.footer }}
-      {% endif %}
+  <div id="footer" class="mt-auto py-4 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          {% if page.footer_first %}
+            {{ page.footer_first }}
+          {% endif %}
+        </div>
+        <div class="col-12 col-lg-4">
+          {% if page.footer_second %}
+            {{ page.footer_second }}
+          {% endif %}
+        </div>
+        <div class="col-12 col-lg-4">
+          {% if page.footer_third %}
+            {{ page.footer_third }}
+          {% endif %}
+        </div>
+      </div>
     </div>
   </div>
 

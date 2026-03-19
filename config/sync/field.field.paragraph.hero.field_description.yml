@@ -1,14 +1,14 @@
-uuid: b286b6eb-2974-44ee-9be3-87290147a1c5
+uuid: a1946826-f985-4046-87b5-4ff3dc734c37
 langcode: vi
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_description
-    - paragraphs.paragraphs_type.listing_grid_item
-id: paragraph.listing_grid_item.field_description
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_description
 field_name: field_description
 entity_type: paragraph
-bundle: listing_grid_item
+bundle: hero
 label: Description
 description: ''
 required: false

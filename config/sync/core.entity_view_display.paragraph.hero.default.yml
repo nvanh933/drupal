@@ -1,21 +1,21 @@
-uuid: fe69b92e-385d-4812-af55-569fa652fe3d
+uuid: b82d0c91-1cb1-45e6-bc7b-a2bc0cfe54b4
 langcode: vi
 status: true
 dependencies:
   config:
-    - field.field.paragraph.listing_grid_item.field_cta_link
-    - field.field.paragraph.listing_grid_item.field_description
-    - field.field.paragraph.listing_grid_item.field_image
-    - field.field.paragraph.listing_grid_item.field_title
-    - paragraphs.paragraphs_type.listing_grid_item
+    - field.field.paragraph.hero.field_buttons
+    - field.field.paragraph.hero.field_description
+    - field.field.paragraph.hero.field_heading
+    - field.field.paragraph.hero.field_image
+    - paragraphs.paragraphs_type.hero
   module:
     - entity_reference_revisions
-id: paragraph.listing_grid_item.default
+id: paragraph.hero.default
 targetEntityType: paragraph
-bundle: listing_grid_item
+bundle: hero
 mode: default
 content:
-  field_cta_link:
+  field_buttons:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
@@ -31,6 +31,14 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_heading:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_image:
     type: entity_reference_entity_view
     label: above
@@ -39,13 +47,5 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden: {  }
