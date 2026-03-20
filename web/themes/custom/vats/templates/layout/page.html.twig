@@ -97,23 +97,9 @@
 
   <div id="footer" class="mt-auto py-4 border-top">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-4">
-          {% if page.footer_first %}
-            {{ page.footer_first }}
-          {% endif %}
-        </div>
-        <div class="col-12 col-lg-4">
-          {% if page.footer_second %}
-            {{ page.footer_second }}
-          {% endif %}
-        </div>
-        <div class="col-12 col-lg-4">
-          {% if page.footer_third %}
-            {{ page.footer_third }}
-          {% endif %}
-        </div>
-      </div>
+      {% if page.footer %}
+          {{ page.footer }}
+        {% endif %}
     </div>
   </div>
 
