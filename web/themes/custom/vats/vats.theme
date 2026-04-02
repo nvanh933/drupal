@@ -141,6 +141,10 @@ function vats_form_user_pass_alter(array &$form, FormStateInterface $form_state,
  * Utility functions.
  * ---------------------------------------------------------------------------
  */
+
+/**
+ * {@inheritDoc}
+ */
 function _vats_set_css_class(array &$form) {
   if (isset($form['actions']['submit']) && is_array($form['actions']['submit'])) {
     $form['actions']['submit']['#attributes']['class'][] = 'w-100';

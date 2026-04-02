@@ -1,25 +1,27 @@
 global:
   css:
     theme:
-      dist/css/vendor.css: {}
-      dist/css/main.css: {}
-      dist/css/components.css: {}
+      node_modules/@fontsource/mulish/index.css: {}
+      # node_modules/@fontsource/mulish/200.css: {}
+      # node_modules/@fontsource/mulish/400.css: {}
+      # node_modules/@fontsource/mulish/600.css: {}
+      node_modules/bootstrap/dist/css/bootstrap.min.css: {}
+      node_modules/bootstrap-icons/font/bootstrap-icons.min.css: {}
+      node_modules/swiper/swiper-bundle.min.css: {}
+      css/common.css: {}
   js:
-    dist/js/vendor.js: {}
-    dist/js/components.js: {}
+    node_modules/bootstrap/dist/js/bootstrap.min.js: {}
+    node_modules/swiper/swiper-bundle.min.js: {}
+    js/common.js: {}
   dependencies:
     - core/jquery
 
 user-login:
   css:
     theme:
-      dist/css/user-login.css: {}
-  dependencies:
-    - vats/global
+      css/user-login.css: {}
 
 user-password:
   css:
     theme:
-      dist/css/user-password.css: {}
-  dependencies:
-    - vats/global
+      css/user-password.css: {}
