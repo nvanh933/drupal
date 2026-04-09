@@ -1,156 +1,75 @@
-# Drupal Project
+<img alt="Drupal Logo" src="https://www.drupal.org/files/Wordmark_blue_RGB.png" height="60px">
 
-## Project Overview
-- CMS: Drupal 11 (`drupal/core-recommended ^11.3`)
-- PHP: 8.4+
-- Database: MySQL 8+ or MariaDB 10.11+
+Drupal is an open source content management platform supporting a variety of
+websites ranging from personal weblogs to large community-driven websites. For
+more information, visit the Drupal website, [Drupal.org][Drupal.org], and join
+the [Drupal community][Drupal community].
 
-## Repository Structure
-- `web/`: Drupal docroot (web server should point here)
-- `config/sync/`: Exported Drupal configuration
-- `web/themes/custom/vats/`: Custom theme (Twig, Sass, Vite build pipeline, hooks)
-- `web/modules/custom/`: Custom modules
-- `vendor/`: Composer dependencies
+## Contributing
 
-## Requirements
-- PHP 8.4+ with common Drupal extensions (`pdo_mysql`, `gd`, `mbstring`, `xml`, `curl`, `zip`, `intl`, `opcache`)
-- MySQL/MariaDB
-- Composer 2
-- Node.js and npm
-- Drush (local binary or global install)
+Drupal is developed on [Drupal.org][Drupal.org], the home of the international
+Drupal community since 2001!
 
-## Setup
-1. Install PHP dependencies:
-   - `composer install`
-2. Install theme frontend dependencies:
-   - `cd web/themes/custom/vats && npm install`
-3. Configure database credentials in `web/sites/default/settings.php`.
-4. Run Drupal install/import flow via browser or Drush.
+[Drupal.org][Drupal.org] hosts Drupal's [GitLab repository][GitLab repository],
+its [issue queue][issue queue], and its [documentation][documentation]. Before
+you start working on code, be sure to search the [issue queue][issue queue] and
+create an issue if your aren't able to find an existing issue.
 
-## Theme: web/themes/custom/vats
+Every issue on Drupal.org automatically creates a new community-accessible fork
+that you can contribute to. Learn more about the code contribution process on
+the [Issue forks & merge requests page][issue forks].
 
-### Root Files
-| File | Purpose |
-|---|---|
-| `vats.info.yml` | Theme metadata, regions, attached libraries |
-| `vats.libraries.yml` | Library definitions (`vendor`, `main`, `components`, route-specific) |
-| `vats.theme` | Preprocess hooks, template suggestions, form alters |
-| `vite.config.mjs` | Vite build entries/output settings |
-| `package.json` | npm scripts and frontend dependencies |
+## Usage
 
-### Source Structure
-```
-src/
-├── common/
-│   ├── _helpers.scss
-│   ├── _typography.scss
-│   ├── _variables.scss
-│   └── main.scss
-├── components/
-│   ├── index.js
-│   ├── layout/
-│   │   ├── footer/
-│   │   └── header/
-│   ├── paragraphs/
-│   │   ├── bluecheese-cta/
-│   │   ├── content/
-│   │   ├── cta/
-│   │   ├── features/
-│   │   ├── hero/
-│   │   ├── listing-grid/
-│   │   └── testimonials/
-│   └── ui/
-│       └── button.scss
-├── pages/
-│   ├── user-login/
-│   │   └── user-login.scss
-│   └── user-password/
-│       └── user-password.scss
-└── vendor/
-	├── fonts.scss
-	└── vendor.js
-```
+For a brief introduction, see [USAGE.txt](/core/USAGE.txt). You can also find
+guides, API references, and more by visiting Drupal's [documentation
+page][documentation].
 
-### Vite Build Entries
-Configured in `vite.config.mjs`:
+You can quickly extend Drupal's core feature set by installing any of its
+[thousands of free and open source modules][modules]. With Drupal and its
+module ecosystem, you can often build most or all of what your project needs
+before writing a single line of code.
 
-| Entry | Source | Output |
-|---|---|---|
-| `vendor` | `src/vendor/vendor.js` | `dist/js/vendor.js`, `dist/css/vendor.css` |
-| `main` | `src/common/main.scss` | `dist/css/main.css` |
-| `components` | `src/components/index.js` | `dist/js/components.js`, `dist/css/components.css` |
-| `user-login` | `src/pages/user-login/user-login.scss` | `dist/css/user-login.css` |
-| `user-password` | `src/pages/user-password/user-password.scss` | `dist/css/user-password.css` |
+## Changelog
 
-### Templates
-```
-templates/
-├── block/
-│   ├── block.html.twig
-│   └── block--system-main-block--node--landing-page.html.twig
-├── content/
-│   ├── media--image.html.twig
-│   ├── node.html.twig
-│   ├── node--landing-page.html.twig
-│   ├── page-title.html.twig
-│   └── taxonomy-term.html.twig
-├── field/
-├── form/
-├── layout/
-│   ├── html.html.twig
-│   ├── maintenance-page.html.twig
-│   ├── page.html.twig
-│   ├── region.html.twig
-│   └── region--node--landing-page--content.html.twig
-├── misc/
-│   └── status-messages.html.twig
-├── navigation/
-├── page/
-│   ├── page--node--landing-page.html.twig
-│   ├── page--user--login.html.twig
-│   └── page--user--password.html.twig
-├── paragraph/
-│   ├── paragraph--bluecheese-cta-section.html.twig
-│   ├── paragraph--content-item.html.twig
-│   ├── paragraph--content-section.html.twig
-│   ├── paragraph--cta-section.html.twig
-│   ├── paragraph--feature-item.html.twig
-│   ├── paragraph--features-section.html.twig
-│   ├── paragraph--hero-section.html.twig
-│   ├── paragraph--listing-grid-item.html.twig
-│   ├── paragraph--listing-grid-section.html.twig
-│   ├── paragraph--testimonial-item.html.twig
-│   └── paragraph--testimonials-section.html.twig
-├── user/
-│   └── user.html.twig
-└── views/
-	├── views-exposed-form.html.twig
-	├── views-view-grid.html.twig
-	├── views-view-list.html.twig
-	├── views-view-table.html.twig
-	├── views-view-unformatted.html.twig
-	└── views-view.html.twig
-```
+Drupal keeps detailed [change records][changelog]. You can search Drupal's
+changes for a record of every notable breaking change and new feature since
+2011.
 
-### Theme Suggestion Hooks
-Defined in `vats.theme`:
+## Security
 
-| Hook | Suggestion pattern | Example |
-|---|---|---|
-| `hook_theme_suggestions_page_alter()` | `page__node__{bundle}` | `page--node--landing-page.html.twig` |
-| `hook_theme_suggestions_region_alter()` | `region__node__{bundle}__content` | `region--node--landing-page--content.html.twig` |
-| `hook_theme_suggestions_block_alter()` | `block__system_main_block__node__{bundle}` | `block--system-main-block--node--landing-page.html.twig` |
+For a list of security announcements, see the [Security advisories
+page][Security advisories] (available as [an RSS feed][security RSS]). This
+page also describes how to subscribe to these announcements via email.
 
-## Useful Commands
-- Install backend dependencies: `composer install`
-- Validate composer config: `composer validate --no-check-publish`
-- Audit locked dependencies: `composer audit --locked`
-- Install theme dependencies: `cd web/themes/custom/vats && npm install`
-- Build theme assets: `cd web/themes/custom/vats && npm run build`
-- Clear Drupal cache: `drush cr`
+For information about the Drupal security process, or to find out how to report
+a potential security issue to the Drupal security team, see the [Security team
+page][security team].
 
-## Contributor Notes
-- Keep changes minimal and scoped.
-- Work primarily in `web/themes/custom/vats` and `web/modules/custom` unless config updates are intended.
-- Do not edit `vendor/`, `web/core/`, or contrib code directly unless explicitly required.
-- Do not commit build artifacts from `web/themes/custom/vats/dist/`.
+## Need a helping hand?
+
+Visit the [Support page][support] or browse [over a thousand Drupal
+providers][service providers] offering design, strategy, development, and
+hosting services.
+
+## Legal matters
+
+Know your rights when using Drupal by reading Drupal core's
+[license](/core/LICENSE.txt).
+
+Learn about the [Drupal trademark and logo policy here][trademark].
+
+[Drupal.org]: https://www.drupal.org
+[Drupal community]: https://www.drupal.org/community
+[GitLab repository]: https://git.drupalcode.org/project/drupal
+[issue queue]: https://www.drupal.org/project/issues/drupal
+[issue forks]: https://www.drupal.org/drupalorg/docs/gitlab-integration/issue-forks-merge-requests
+[documentation]: https://www.drupal.org/documentation
+[changelog]: https://www.drupal.org/list-changes/drupal
+[modules]: https://www.drupal.org/project/project_module
+[security advisories]: https://www.drupal.org/security
+[security RSS]: https://www.drupal.org/security/rss.xml
+[security team]: https://www.drupal.org/drupal-security-team
+[service providers]: https://www.drupal.org/drupal-services
+[support]: https://www.drupal.org/support
+[trademark]: https://www.drupal.com/trademark
