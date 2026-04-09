@@ -2,7 +2,7 @@ uuid: d7c4e3c3-22a7-4ad3-8831-83418e9c6f67
 langcode: vi
 status: true
 dependencies: {  }
-name: 'Article Categories'
+name: 'Danh mục bài viết'
 vid: article_categories
 description: null
 weight: 0

@@ -1,9 +1,0 @@
-uuid: b1712c82-777d-45ac-92ad-63c4d6f2165f
-langcode: vi
-status: true
-dependencies: {  }
-name: Tags
-vid: tags
-description: null
-weight: 0
-new_revision: false

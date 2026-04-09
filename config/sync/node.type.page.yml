@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Page
+name: Trang
 type: page
 description: null
 help: null

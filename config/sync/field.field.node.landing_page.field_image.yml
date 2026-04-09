@@ -10,7 +10,7 @@ id: node.landing_page.field_image
 field_name: field_image
 entity_type: node
 bundle: landing_page
-label: Image
+label: Ảnh
 description: ''
 required: false
 translatable: false

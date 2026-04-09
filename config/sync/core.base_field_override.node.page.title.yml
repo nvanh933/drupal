@@ -1,18 +1,17 @@
-uuid: ade7293b-b4c0-487a-9dc3-8c71cbfc6c52
+uuid: cfc8be4e-8a32-4c13-8ec7-6290d2b6ffac
 langcode: vi
 status: true
 dependencies:
   config:
-    - field.storage.node.field_seo_title
     - node.type.page
-id: node.page.field_seo_title
-field_name: field_seo_title
+id: node.page.title
+field_name: title
 entity_type: node
 bundle: page
-label: 'SEO - Title'
+label: 'Tiêu đề'
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

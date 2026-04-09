@@ -1,0 +1,23 @@
+uuid: 62606b32-17e9-453d-9f15-7ec5f58e5b4c
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.listing_grid_item
+  module:
+    - link
+id: paragraph.listing_grid_item.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: listing_grid_item
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

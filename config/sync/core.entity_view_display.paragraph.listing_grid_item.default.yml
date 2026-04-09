@@ -3,27 +3,18 @@ langcode: vi
 status: true
 dependencies:
   config:
-    - field.field.paragraph.listing_grid_item.field_cta_link
     - field.field.paragraph.listing_grid_item.field_description
     - field.field.paragraph.listing_grid_item.field_image
+    - field.field.paragraph.listing_grid_item.field_link
     - field.field.paragraph.listing_grid_item.field_title
     - paragraphs.paragraphs_type.listing_grid_item
   module:
-    - entity_reference_revisions
+    - link
 id: paragraph.listing_grid_item.default
 targetEntityType: paragraph
 bundle: listing_grid_item
 mode: default
 content:
-  field_cta_link:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_description:
     type: basic_string
     label: above
@@ -39,6 +30,18 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_title:
     type: string

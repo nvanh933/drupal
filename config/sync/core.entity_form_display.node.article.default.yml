@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.article.field_metatag
     - field.field.node.article.field_seo_description
     - field.field.node.article.field_seo_title
-    - field.field.node.article.field_tags
     - node.type.article
   module:
     - media_library
@@ -78,16 +77,6 @@ content:
     weight: 12
     region: content
     settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 11
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

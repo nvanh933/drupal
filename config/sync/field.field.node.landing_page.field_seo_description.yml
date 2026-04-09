@@ -9,7 +9,7 @@ id: node.landing_page.field_seo_description
 field_name: field_seo_description
 entity_type: node
 bundle: landing_page
-label: 'SEO Description'
+label: 'SEO - Description'
 description: ''
 required: false
 translatable: false

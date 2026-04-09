@@ -3,28 +3,19 @@ langcode: vi
 status: true
 dependencies:
   config:
-    - field.field.paragraph.button_component.field_cta_link
     - field.field.paragraph.button_component.field_icon
     - field.field.paragraph.button_component.field_icon_position
+    - field.field.paragraph.button_component.field_link
     - field.field.paragraph.button_component.field_variant
     - paragraphs.paragraphs_type.button_component
   module:
-    - entity_reference_revisions
+    - link
     - options
 id: paragraph.button_component.default
 targetEntityType: paragraph
 bundle: button_component
 mode: default
 content:
-  field_cta_link:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_icon:
     type: string
     label: hidden
@@ -39,6 +30,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_variant:
     type: list_default

@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Article
+name: 'Bài viết'
 type: article
 description: null
 help: null
