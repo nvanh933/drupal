@@ -93,4 +93,3 @@ phpunit.xml
 docker-compose.override.yml
 
 .github/
-.htaccess
