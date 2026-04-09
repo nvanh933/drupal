@@ -1,12 +1,12 @@
-uuid: 72a38659-204d-4351-b803-3ed94360ddcf
+uuid: 4977722b-1a5f-44e8-a090-0ea97b8b239e
 langcode: vi
 status: true
 dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_icon_position
-field_name: field_icon_position
+id: paragraph.field_image_position
+field_name: field_image_position
 entity_type: paragraph
 type: list_string
 settings:

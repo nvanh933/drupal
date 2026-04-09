@@ -1,0 +1,19 @@
+uuid: 2cfd8641-8c29-444b-8fdb-7c6bae2cfb35
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.call_to_action
+id: paragraph.call_to_action.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: call_to_action
+label: 'Mô tả'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

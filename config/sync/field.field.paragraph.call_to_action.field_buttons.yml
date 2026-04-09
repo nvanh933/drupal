@@ -1,0 +1,49 @@
+uuid: 99d32085-4e35-486a-8696-0da39c4daefe
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_buttons
+    - paragraphs.paragraphs_type.button_component
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - entity_reference_revisions
+id: paragraph.call_to_action.field_buttons
+field_name: field_buttons
+entity_type: paragraph
+bundle: call_to_action
+label: 'Nút CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      button_component: button_component
+    negate: 0
+    target_bundles_drag_drop:
+      button_component:
+        weight: 6
+        enabled: true
+      call_to_action:
+        weight: 9
+        enabled: false
+      hero:
+        weight: 7
+        enabled: false
+      listing_grid:
+        weight: 9
+        enabled: false
+      listing_grid_item:
+        weight: 10
+        enabled: false
+      testimonial:
+        weight: 11
+        enabled: false
+      testimonial_item:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

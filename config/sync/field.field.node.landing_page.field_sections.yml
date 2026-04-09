@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_sections
     - node.type.landing_page
+    - paragraphs.paragraphs_type.call_to_action
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.listing_grid
     - paragraphs.paragraphs_type.testimonial
@@ -26,12 +27,16 @@ settings:
     target_bundles:
       hero: hero
       listing_grid: listing_grid
+      call_to_action: call_to_action
       testimonial: testimonial
     negate: 0
     target_bundles_drag_drop:
       button_component:
         weight: 5
         enabled: false
+      call_to_action:
+        weight: 9
+        enabled: true
       hero:
         weight: 7
         enabled: true
@@ -44,4 +49,7 @@ settings:
       testimonial:
         weight: 10
         enabled: true
+      testimonial_item:
+        weight: 14
+        enabled: false
 field_type: entity_reference_revisions

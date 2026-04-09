@@ -1,0 +1,21 @@
+uuid: 7e1cc17c-e809-4641-995c-ea250bdcdd2f
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.call_to_action
+  module:
+    - options
+id: paragraph.call_to_action.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: call_to_action
+label: 'Vị trí ảnh'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
