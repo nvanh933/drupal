@@ -9,7 +9,7 @@ id: node.landing_page.field_seo_title
 field_name: field_seo_title
 entity_type: node
 bundle: landing_page
-label: 'SEO - Title'
+label: 'SEO - Tiêu đề'
 description: ''
 required: false
 translatable: false

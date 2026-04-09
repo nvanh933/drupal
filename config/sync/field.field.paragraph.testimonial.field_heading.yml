@@ -1,0 +1,19 @@
+uuid: 7f48e548-43f2-45e2-bf67-b4a225d25293
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.testimonial
+id: paragraph.testimonial.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: testimonial
+label: 'Tiêu đề'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

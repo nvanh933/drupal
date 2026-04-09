@@ -9,7 +9,7 @@ id: paragraph.listing_grid_item.field_description
 field_name: field_description
 entity_type: paragraph
 bundle: listing_grid_item
-label: Description
+label: 'Mô tả'
 description: ''
 required: false
 translatable: false

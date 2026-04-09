@@ -9,16 +9,16 @@ label: Page
 type: 'canonical_entities:node'
 pattern: 'page/[node:title]'
 selection_criteria:
-  0770df4d-2dc7-4b05-9e10-f9176bb95992:
+  71ab1fb8-e2be-4ffc-b807-8b013e51bb16:
     id: 'entity_bundle:node'
     negate: false
+    uuid: 71ab1fb8-e2be-4ffc-b807-8b013e51bb16
     context_mapping:
       node: node
     bundles:
       page: page
-    uuid: 0770df4d-2dc7-4b05-9e10-f9176bb95992
 selection_logic: and
-weight: -5
+weight: -7
 relationships:
   'node:langcode:language':
     label: Language

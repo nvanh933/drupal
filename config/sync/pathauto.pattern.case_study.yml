@@ -1,0 +1,24 @@
+uuid: 2404d73a-f87c-4bcf-9afc-3a4c48904075
+langcode: vi
+status: true
+dependencies:
+  module:
+    - node
+id: case_study
+label: 'Case Study'
+type: 'canonical_entities:node'
+pattern: 'du-an/[node:title]'
+selection_criteria:
+  f71c874c-8014-4352-bf31-3bc2724ec71c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: f71c874c-8014-4352-bf31-3bc2724ec71c
+    context_mapping:
+      node: node
+    bundles:
+      case_study: case_study
+selection_logic: and
+weight: -9
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,19 @@
+uuid: b6538a37-986d-4cf6-bbd1-474b53a658d6
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_description
+    - node.type.case_study
+id: node.case_study.field_seo_description
+field_name: field_seo_description
+entity_type: node
+bundle: case_study
+label: 'SEO - Mô tả'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

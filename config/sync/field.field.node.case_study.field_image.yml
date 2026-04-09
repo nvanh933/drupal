@@ -1,0 +1,29 @@
+uuid: 9b0b2aea-04a2-420c-93dd-e975f248f5bb
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media.type.image
+    - node.type.case_study
+id: node.case_study.field_image
+field_name: field_image
+entity_type: node
+bundle: case_study
+label: Ảnh
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 465e9c42-e121-4f7b-8a09-52d3b2087291
+langcode: vi
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Dự Án Thực Tế'
+type: case_study
+description: null
+help: null
+new_revision: false
+preview_mode: 0
+display_submitted: false

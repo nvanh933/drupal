@@ -12,7 +12,7 @@ id: paragraph.hero.field_buttons
 field_name: field_buttons
 entity_type: paragraph
 bundle: hero
-label: Buttons
+label: 'Nút CTA'
 description: ''
 required: false
 translatable: false
@@ -31,13 +31,16 @@ settings:
       hero:
         weight: 7
         enabled: false
-      link_component:
-        weight: 8
-        enabled: false
       listing_grid:
         weight: 9
         enabled: false
       listing_grid_item:
         weight: 10
+        enabled: false
+      testimonial:
+        weight: 11
+        enabled: false
+      testimonial_item:
+        weight: 12
         enabled: false
 field_type: entity_reference_revisions

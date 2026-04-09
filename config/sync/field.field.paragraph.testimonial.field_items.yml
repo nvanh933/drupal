@@ -1,0 +1,46 @@
+uuid: d5fc9a94-a623-44da-aad7-9a7cfe2e0b46
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items
+    - paragraphs.paragraphs_type.testimonial
+    - paragraphs.paragraphs_type.testimonial_item
+  module:
+    - entity_reference_revisions
+id: paragraph.testimonial.field_items
+field_name: field_items
+entity_type: paragraph
+bundle: testimonial
+label: Mục
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      testimonial_item: testimonial_item
+    negate: 0
+    target_bundles_drag_drop:
+      button_component:
+        weight: 5
+        enabled: false
+      hero:
+        weight: 9
+        enabled: false
+      listing_grid:
+        weight: 7
+        enabled: false
+      listing_grid_item:
+        weight: 8
+        enabled: false
+      testimonial:
+        weight: 12
+        enabled: false
+      testimonial_item:
+        weight: 7
+        enabled: true
+field_type: entity_reference_revisions

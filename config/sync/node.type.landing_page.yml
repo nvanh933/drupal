@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Landing Page'
+name: 'Trang Landing'
 type: landing_page
 description: null
 help: null

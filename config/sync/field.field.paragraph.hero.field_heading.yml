@@ -9,7 +9,7 @@ id: paragraph.hero.field_heading
 field_name: field_heading
 entity_type: paragraph
 bundle: hero
-label: Heading
+label: 'Tiêu đề'
 description: ''
 required: false
 translatable: false

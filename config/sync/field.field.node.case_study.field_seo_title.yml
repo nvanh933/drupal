@@ -1,0 +1,19 @@
+uuid: 42a23f1d-2bbb-4370-9453-d725d41d8372
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_title
+    - node.type.case_study
+id: node.case_study.field_seo_title
+field_name: field_seo_title
+entity_type: node
+bundle: case_study
+label: 'SEO - Tiêu đề'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

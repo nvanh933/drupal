@@ -11,7 +11,7 @@ id: paragraph.button_component.field_icon_position
 field_name: field_icon_position
 entity_type: paragraph
 bundle: button_component
-label: 'Icon position'
+label: 'Vị trí biểu tượng'
 description: ''
 required: false
 translatable: false

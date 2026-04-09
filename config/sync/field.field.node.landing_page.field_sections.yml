@@ -7,6 +7,7 @@ dependencies:
     - node.type.landing_page
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.listing_grid
+    - paragraphs.paragraphs_type.testimonial
   module:
     - entity_reference_revisions
 id: node.landing_page.field_sections
@@ -25,6 +26,7 @@ settings:
     target_bundles:
       hero: hero
       listing_grid: listing_grid
+      testimonial: testimonial
     negate: 0
     target_bundles_drag_drop:
       button_component:
@@ -33,13 +35,13 @@ settings:
       hero:
         weight: 7
         enabled: true
-      link_component:
-        weight: 6
-        enabled: false
       listing_grid:
         weight: 7
         enabled: true
       listing_grid_item:
         weight: 17
         enabled: false
+      testimonial:
+        weight: 10
+        enabled: true
 field_type: entity_reference_revisions

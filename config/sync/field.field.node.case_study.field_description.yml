@@ -1,0 +1,19 @@
+uuid: bd9e1481-65ff-4011-81de-c24010bde44e
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.case_study
+id: node.case_study.field_description
+field_name: field_description
+entity_type: node
+bundle: case_study
+label: 'Mô tả ngắn'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

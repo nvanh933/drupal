@@ -9,7 +9,7 @@ id: paragraph.listing_grid_item.field_title
 field_name: field_title
 entity_type: paragraph
 bundle: listing_grid_item
-label: Title
+label: 'Tiêu đề'
 description: ''
 required: false
 translatable: false

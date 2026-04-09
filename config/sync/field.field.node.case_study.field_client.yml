@@ -1,0 +1,19 @@
+uuid: c191fdd4-4d7f-475b-8f89-dfa6d30898cf
+langcode: vi
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client
+    - node.type.case_study
+id: node.case_study.field_client
+field_name: field_client
+entity_type: node
+bundle: case_study
+label: 'Khách hàng'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
