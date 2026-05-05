@@ -7,28 +7,6 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
-use Drupal\node\NodeInterface;
-
-/*
- * ---------------------------------------------------------------------------
- * Helper functions.
- * ---------------------------------------------------------------------------
- */
-
-/**
- * Returns the current route name.
- */
-function _vats_get_route_name(): string {
-  return \Drupal::routeMatch()->getRouteName();
-}
-
-/**
- * Returns the node entity from current route, or NULL.
- */
-function _vats_get_route_node(): ?NodeInterface {
-  $node = \Drupal::routeMatch()->getParameter('node');
-  return $node instanceof NodeInterface ? $node : NULL;
-}
 
 /*
  * ---------------------------------------------------------------------------
@@ -40,19 +18,24 @@ function _vats_get_route_node(): ?NodeInterface {
  * Implements hook_preprocess_page().
  */
 function vats_preprocess_page(array &$vars): void {
-  $vars['site_name'] = \Drupal::config('system.site')->get('name');
-  $vars['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+  // Lấy site name và slogan từ config.
+  $site_config = \Drupal::config('system.site');
+  $vars['site_name'] = $site_config->get('name');
+  $vars['site_slogan'] = $site_config->get('slogan');
 
+  // Lấy logo từ theme settings.
   $themeSettingsProvider = \Drupal::service('Drupal\Core\Extension\ThemeSettingsProvider');
   $vars['site_logo'] = $themeSettingsProvider->getSetting('logo.url');
 
-  $route_name = _vats_get_route_name();
+  /** @var \Drupal\vats_core\Service\RouteHelper $route_helper */
+  $route_helper = \Drupal::service('vats_core.route_helper');
+  $route_name = $route_helper->getRouteName();
 
+  // Gắn library theo route.
   if ($route_name === 'user.login') {
     $vars['#attached']['library'][] = 'vats/user-login';
   }
-
-  if ($route_name === 'user.pass') {
+  elseif ($route_name === 'user.pass') {
     $vars['#attached']['library'][] = 'vats/user-password';
   }
 }
@@ -67,25 +50,29 @@ function vats_preprocess_page(array &$vars): void {
  * Implements hook_theme_suggestions_page_alter().
  */
 function vats_theme_suggestions_page_alter(array &$suggestions, array $vars): void {
-  $node = _vats_get_route_node();
-  if (!$node) {
-    return;
-  }
+  /** @var \Drupal\vats_core\Service\RouteHelper $route_helper */
+  $route_helper = \Drupal::service('vats_core.route_helper');
+  $node = $route_helper->getRouteNode();
 
-  $suggestions[] = 'page__node__' . $node->bundle();
+  if ($node) {
+    $suggestions[] = 'page__node__' . $node->bundle();
+  }
 }
 
 /**
  * Implements hook_theme_suggestions_region_alter().
  */
 function vats_theme_suggestions_region_alter(array &$suggestions, array $vars): void {
-  $node = _vats_get_route_node();
-  if (!$node) {
+  $region = $vars['elements']['#region'] ?? '';
+  if ($region !== 'content') {
     return;
   }
 
-  $region = $vars['elements']['#region'] ?? '';
-  if ($region === 'content') {
+  /** @var \Drupal\vats_core\Service\RouteHelper $route_helper */
+  $route_helper = \Drupal::service('vats_core.route_helper');
+  $node = $route_helper->getRouteNode();
+
+  if ($node) {
     $suggestions[] = 'region__node__' . $node->bundle() . '__content';
   }
 }
@@ -99,12 +86,13 @@ function vats_theme_suggestions_block_alter(array &$suggestions, array $vars): v
     return;
   }
 
-  $node = _vats_get_route_node();
-  if (!$node) {
-    return;
-  }
+  /** @var \Drupal\vats_core\Service\RouteHelper $route_helper */
+  $route_helper = \Drupal::service('vats_core.route_helper');
+  $node = $route_helper->getRouteNode();
 
-  $suggestions[] = 'block__system_main_block__node__' . $node->bundle();
+  if ($node) {
+    $suggestions[] = 'block__system_main_block__node__' . $node->bundle();
+  }
 }
 
 /*
@@ -131,7 +119,10 @@ function vats_form_user_pass_alter(array &$form, FormStateInterface $form_state,
   $form['name']['#title'] = new TranslatableMarkup('Địa chỉ email');
   $form['actions']['submit']['#value'] = new TranslatableMarkup('Gửi yêu cầu');
 
-  unset($form['mail']);
+  // Bỏ bớt field mail nếu không cần thiết.
+  if (isset($form['mail'])) {
+    unset($form['mail']);
+  }
 
   _vats_set_css_class($form);
 }
@@ -143,10 +134,13 @@ function vats_form_user_pass_alter(array &$form, FormStateInterface $form_state,
  */
 
 /**
- * {@inheritDoc}
+ * Set custom CSS classes for the form.
+ *
+ * @param array $form
+ *   The form array.
  */
-function _vats_set_css_class(array &$form) {
-  if (isset($form['actions']['submit']) && is_array($form['actions']['submit'])) {
+function _vats_set_css_class(array &$form): void {
+  if (!empty($form['actions']['submit'])) {
     $form['actions']['submit']['#attributes']['class'][] = 'w-100';
   }
 }

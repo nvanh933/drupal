@@ -1,0 +1,5 @@
+name: 'VATS Core'
+type: module
+description: 'Provides core functionality for the VATS custom module.'
+core_version_requirement: ^11
+package: Custom

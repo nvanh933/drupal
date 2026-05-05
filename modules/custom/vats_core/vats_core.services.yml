@@ -1,0 +1,4 @@
+services:
+  vats_core.route_helper:
+    class: Drupal\vats_core\Service\RouteHelper
+    arguments: ['@current_route_match']
